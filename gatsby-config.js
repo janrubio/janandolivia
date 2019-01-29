@@ -1,6 +1,7 @@
 module.exports = {
     pathPrefix: "/janandolivia",
     plugins: [
+        'gatsby-plugin-sass',
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {

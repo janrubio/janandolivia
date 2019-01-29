@@ -1,7 +1,8 @@
 import React from "react"
+import "./index.scss";
 
 export default ({ children }) => (
-    <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+    <div class="grid-container">
         {children}
     </div>
 )
