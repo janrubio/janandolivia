@@ -12,21 +12,32 @@ body {
 .banner{
     border: 12px solid #fff;
     width: 100%;
-    min-height: 700px;
+    min-height: 450px;
     height: 100%;
     background-color: #d9ebf5;
     text-align: center;
     display: flex;
     flex-flow: column;
     justify-content: center;
+
+    @include breakpoint(medium) {
+        height: 700px;
+    }
 }
 
 .logo {
     display: block;
-    width: 500px;
+    width: 75%;
+    max-width: 500px;
+    height: auto;
     padding: 1rem;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    
+    @include breakpoint(medium) {
+        margin-bottom: 4rem;
+        width: 60%;
+    }
 }
 
 .banner__detail-group {
@@ -46,16 +57,24 @@ body {
 }
 
 .banner__detail {
-    padding: 1.25rem 3rem 1rem;
+    padding: 1rem 1.75rem 0.75rem;
     border: 2px solid #fff;
     text-transform: uppercase;
     color: #153048;
-
     font-family: 'Libre Baskerville', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 700;
     letter-spacing: 1.5px;
+    font-size: 0.8rem;
+
+    @include breakpoint(medium) {
+        padding: 1.25rem 2rem 1rem;
+        font-size: 1rem;
+    }
+
+    @include breakpoint(large) {
+        padding: 1.25rem 3rem 1rem;
+        font-size: 1.1rem;
+    }
 
     & + & {
         border-left: 0;
