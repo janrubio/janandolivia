@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{135:function(e,n,a){"use strict";a.r(n);var t=a(0),r=a.n(t),i=function(e){var n=e.children;return r.a.createElement("div",{style:{margin:"3rem auto",maxWidth:650,padding:"0 1rem"}},n)};n.default=function(){return r.a.createElement(i,null,r.a.createElement("div",null,"Jan & Olivia"))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-dae3784bc8359926652f.js.map
