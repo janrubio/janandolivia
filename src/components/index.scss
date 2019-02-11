@@ -6,26 +6,58 @@
 
 html,
 body {
+    background-color: #fff;
+}
+
+.banner{
+    border: 12px solid #fff;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
     background-color: #d9ebf5;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .logo {
-    left: 50%;
-    position: absolute;
-    top: 100px;
+    display: block;
+    width: 500px;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
 }
 
-.logo__container {
-    left: -50%;
+.banner__detail-group {
+    margin: 0 auto;
     position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+    }
 }
 
-.logo__container > img {
-    width: 480px;
-}
+.banner__detail {
+    padding: 1.25rem 3rem 1rem;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    color: #153048;
 
-.logo__description {
-    color: #75a1b7;
-    margin-top: 80px;
-    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1.5px;
+
+    & + & {
+        border-left: 0;
+    }
 }

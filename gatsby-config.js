@@ -16,5 +16,16 @@ module.exports = {
                 exclude: ["/preview/**", "/do-not-track/me/too/"],
             },
         },
+        {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                google: {
+                    families: ['Libre+Baskerville:700']
+                },
+                typekit: {
+                    id: 'szu8fhq'
+                },
+            },
+        },
     ],
 }
