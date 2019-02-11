@@ -3,3 +3,23 @@
 @import '~foundation-sites/scss/foundation';
 
 @include foundation-everything;
+
+html,
+body {
+    background-color: #d9ebf5;
+}
+
+.logo {
+    left: 50%;
+    position: absolute;
+    top: 100px;
+}
+
+.logo__container {
+    left: -50%;
+    position: relative;
+}
+
+.logo__container > img {
+    width: 480px;
+}
