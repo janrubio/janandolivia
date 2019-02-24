@@ -1,0 +1,11 @@
+// Responsive Breakpoint Mixin
+
+@mixin breakpoint($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+
+    @if $value != null {
+        @media only screen and (min-width: $value) {
+            @content;
+        }
+    }
+}

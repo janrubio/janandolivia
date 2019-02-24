@@ -1,0 +1,17 @@
+// Layout
+
+// Set border-box on all elements
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+html,
+body {
+    background-color: #fff;
+}

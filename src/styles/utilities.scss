@@ -1,0 +1,35 @@
+// Utility Classes
+
+// Background Colors
+.u-fill--dark {
+    // background-color: $black;
+}
+
+// Text Colors
+.u-color--primary {
+    // color: $primary-color;
+}
+
+// Measure (restrict content to readable line length)
+.u-measure {
+    // max-width: 65ch;
+}
+
+
+
+
+// Visibility
+
+.u-show-for-medium {
+    display: none;
+
+    @include breakpoint(medium) {
+        display: initial;
+    }
+}
+
+.u-hide-for-medium {
+    @include breakpoint(medium) {
+        display: none;
+    }
+}

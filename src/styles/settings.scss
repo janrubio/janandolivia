@@ -1,0 +1,42 @@
+// Settings
+
+// Typography
+$font-family-serif: 'mrs-eaves', times, serif;
+$font-family-serif-smallcaps: 'mrs-eaves-roman-all-small-ca', serif;
+$font-family-serif-alt: 'Libre Baskerville', times, serif;
+$font-family-sans: 'brandon-grotesque', 'Helvetica Neue', Helvetica, sans-serif;
+
+
+// Colors
+$mint: #98efdc;
+$black: #222222;
+$white: #ffffff;
+
+// Palette
+$primary-color: $mint;
+$text-color: $black;
+
+
+// Breakpoints
+$breakpoints: (
+    xsmall: 0,
+    small: 420px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
+
+// Animation
+$default-transition-speed: 200ms;
+$default-transition-ease: ease-in;
+
+
+// Z-index
+$z0 : 0;
+$z1 : 10;
+$z2 : 20;
+$z3 : 30;
+$z4 : 40;
+$z5 : 50;

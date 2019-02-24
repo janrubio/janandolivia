@@ -13,13 +13,13 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "foundation-sites": "^6.5.3",
     "gatsby": "^2.0.76",
     "gatsby-plugin-google-analytics": "^2.0.12",
     "gatsby-plugin-sass": "^2.0.8",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "what-input": "^5.1.3"

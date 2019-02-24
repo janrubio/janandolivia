@@ -1,0 +1,37 @@
+// Typography
+
+body {
+    font-family: $font-family-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    color: $text-color;
+}
+
+.text--regular {
+    font-size: 1rem;
+}
+
+// Headings
+.heading {
+    font-family: $font-family-serif-alt;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    text-rendering: optimizeLegibility;
+}
+
+    .heading--large {
+        font-size: 1.7rem;
+    }
+
+    .heading--medium {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .heading--small {
+        font-family: $font-family-sans;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }

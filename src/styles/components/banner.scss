@@ -1,13 +1,4 @@
-@import '~foundation-sites/scss/util/util';
-@import './settings';
-@import '~foundation-sites/scss/foundation';
-
-@include foundation-everything;
-
-html,
-body {
-    background-color: #fff;
-}
+// Banner
 
 .banner{
     border: 12px solid #fff;
@@ -43,6 +34,7 @@ body {
 .banner__detail-group {
     margin: 0 auto;
     position: relative;
+    display: flex;
 
     &:after {
         content: '';
