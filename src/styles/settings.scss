@@ -8,24 +8,23 @@ $font-family-sans: 'brandon-grotesque', 'Helvetica Neue', Helvetica, sans-serif;
 
 
 // Colors
-$mint: #98efdc;
-$black: #222222;
-$white: #ffffff;
+$deepnavy: #153048;
+$smokeblue: #A2C3D4;
+// $smokeblue--light: #DAE7EE;
+// $smokeblue--lightest: #E3E9EC;
+// $smokeblue--dark: #8297AB;
+
+$color-gray: #F5F5F5;
+$color-black: #444444;
+$color-white: #ffffff;
 
 // Palette
-$primary-color: $mint;
-$text-color: $black;
-
-
-// Breakpoints
-$breakpoints: (
-    xsmall: 0,
-    small: 420px,
-    medium: 640px,
-    large: 1024px,
-    xlarge: 1200px,
-    xxlarge: 1440px,
-);
+$color-primary: $smokeblue;
+$color-secondary: $deepnavy;
+$color-primary--light: tint($color-primary, 60%);
+$color-primary--lighter: tint($color-primary, 75%);
+$color-primary--dark: shade($color-primary, 25%);
+$color-text: $color-black;
 
 
 // Animation

@@ -1,5 +1,15 @@
 // Responsive Breakpoint Mixin
 
+// Breakpoints
+$breakpoints: (
+    xsmall: 0,
+    small: 420px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
 @mixin breakpoint($breakpoint) {
     $value: map-get($breakpoints, $breakpoint);
 

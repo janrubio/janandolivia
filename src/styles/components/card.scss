@@ -1,0 +1,24 @@
+// Card
+
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.card__image {
+    width: 150px;
+    height: 150px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.card__description {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: $color-white;
+    background: $color-gray;
+    align-self: flex-end;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+}

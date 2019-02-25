@@ -1,13 +1,18 @@
 // Utility Classes
 
 // Background Colors
-.u-fill--dark {
-    // background-color: $black;
-}
+.u-fill--primary { background-color: $color-primary; }
+.u-fill--primary--light { background-color: $color-primary--light; }
+.u-fill--primary--lighter { background-color: $color-primary--lighter; }
+.u-fill--primary--dark { background-color: $color-primary--dark; }
+.u-fill--secondary { background-color: $color-secondary; }
+.u-fill--gray { background-color: $color-gray; }
+.u-fill--black { background-color: $color-black; }
+.u-fill--white { background-color: $color-white; }
 
 // Text Colors
 .u-color--primary {
-    // color: $primary-color;
+    color: $color-primary;
 }
 
 // Measure (restrict content to readable line length)
