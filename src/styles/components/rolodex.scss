@@ -5,23 +5,35 @@
     position: relative;
     justify-content: center;
     z-index: $z0;
-    margin-top: -7.25rem;
+    margin-top: -6.75rem;
+
+    @include breakpoint(medium) {
+        margin-top: -7.25rem;        
+    }
 }
 
 .rolodex__card {
     @extend .heading;
     position: relative;
-    width: 85px;
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
+    width: 65px;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
     border: 2px solid $color-secondary;
     border-radius: 6px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     color: $color-secondary;
-    text-shadow: 3px 3px $color-primary--dark;
+    text-shadow: 2px 2px lighten($color-primary--dark, 5%);
     font-weight: 400;
     letter-spacing: -0.5px;
+    
+    @include breakpoint(medium) {
+        width: 85px;
+        padding-top: 1.25rem;
+        padding-bottom: 1rem;
+        font-size: 2.5rem;
+        text-shadow: 3px 3px lighten($color-primary--dark, 5%);
+    }
 
     &::before {
         content: '';
