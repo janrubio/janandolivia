@@ -1,24 +1,62 @@
 // Card
 
 .card {
+    position: relative;
     display: inline-flex;
     flex-direction: column;
     width: 150px;
+    margin: 0.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(medium) {
+        width: 200px;
+    }
 }
 
 .card__image {
+    position: relative;
     width: 150px;
     height: 150px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    z-index: $z1;
+
+    @include breakpoint(medium) {
+        width: 200px;
+        height: 200px;
+    }
 }
+
+    .card__image--underlay:after {
+        content: '';
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        display: block;
+        height: 3rem;
+        width: calc(100% + 2rem);
+        z-index: $z0;
+        @include breakpoint(large) {
+            background-color: $color-white;
+        }
+    }
+
 .card__description {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     background: $color-white;
-    background: $color-gray;
     align-self: flex-end;
     width: 100%;
     padding: 0.5rem;
     font-size: 0.75rem;
+    text-align: center;
 }
+
+
+.card-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+

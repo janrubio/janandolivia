@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => (
-    <svg xmlns="http://www.w3.org/2000/svg" style={{height: '0', width: '0'}}>
+    <svg xmlns="http://www.w3.org/2000/svg" style={{display: 'none'}}>
         <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="icon-bird">
                 <g fillRule="nonzero" fill="none">

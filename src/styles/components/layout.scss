@@ -15,3 +15,24 @@ html,
 body {
     background-color: #fff;
 }
+
+.container {
+    position: relative;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.flex-container {
+    position: relative;
+    display: flex;
+}
+
+.flex-item {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.u-justify-center {
+    justify-content: center;
+}

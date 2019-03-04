@@ -23,7 +23,7 @@ export default () =>
             <div className="card">
                 <div className="card__image u-fill--primary--light"></div>
                 <div className="card__description">
-                    <code>$color-primary--light-</code>
+                    <code>$color-primary--light</code>
                 </div>
             </div>
 
