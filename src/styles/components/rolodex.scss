@@ -1,0 +1,43 @@
+// Rolodex Cards
+
+.rolodex {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    z-index: $z0;
+    margin-top: -7.25rem;
+}
+
+.rolodex__card {
+    @extend .heading;
+    position: relative;
+    width: 85px;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    border: 2px solid $color-secondary;
+    border-radius: 6px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: $color-secondary;
+    text-shadow: 3px 3px $color-primary--dark;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% + 4px);
+        left: 3px;
+        display: block;
+        height: calc(50% + 2px);
+        width: calc(100% + 2px);
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: $color-primary--light;
+        z-index: -1;
+    }
+
+    & + & {
+        margin-left: 0.75rem;
+    }
+}

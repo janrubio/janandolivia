@@ -20,7 +20,7 @@ module.exports = {
             resolve: 'gatsby-plugin-web-font-loader',
             options: {
                 google: {
-                    families: ['Libre+Baskerville:700']
+                    families: ['Libre+Baskerville:400,700']
                 },
                 typekit: {
                     id: 'szu8fhq'

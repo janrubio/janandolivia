@@ -11,14 +11,12 @@
 .u-fill--white { background-color: $color-white; }
 
 // Text Colors
-.u-color--primary {
-    color: $color-primary;
-}
+.u-color--primary { color: $color-primary; }
 
 // Measure (restrict content to readable line length)
-.u-measure {
-    max-width: 65ch;
-}
+.u-measure { max-width: 65ch; }
+
+.u-text-center { text-align: center; }
 
 // Spacing
 .u-mt1 { margin-top: 1rem; }
@@ -32,6 +30,7 @@
 .u-mb4 { margin-bottom: 4rem; }
 .u-mb6 { margin-bottom: 6rem; }
 .u-mb9 { margin-bottom: 9rem; }
+.u-mb12 { margin-bottom: 12rem; }
 
 
 

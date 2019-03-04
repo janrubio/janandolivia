@@ -35,7 +35,7 @@ export default () =>
             </div>
 
             <div className="card">
-                <div className="card__image u-fill--primary-dark"></div>
+                <div className="card__image u-fill--primary--dark"></div>
                 <div className="card__description">
                     <code>$color-primary--dark</code>
                 </div>

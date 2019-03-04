@@ -16,8 +16,8 @@ export default () =>
                 </div>
             </div>
         </div>
-        <div className="container u-mb9">
-            <section class="section flex-container u-justify-center">
+        <div className="container u-mb12">
+            <section class="flex-container u-justify-center">
                 <div className="flex-item">
                     <article className="u-measure article u-mt3">
                         <h1 className="article__heading">
@@ -91,7 +91,22 @@ export default () =>
             </section>
         </div>
 
-        <section className="container">
+        <section className="section u-fill--gray">
+            <div className="container">
+                
+                <div className="rolodex">
+                    <div className="rolodex__card">06</div>
+                    <div className="rolodex__card">30</div>
+                    <div className="rolodex__card">19</div>
+                </div>
+                
+                <h2 className="heading heading--medium u-text-center u-mt4 u-mb4">
+                    here’s the plan for sunday, june 30th— it’s a good one.
+                </h2>
+            </div>
+        </section>
+
+        <section>
             <div style={{textAlign: 'center'}}>
                 <svg viewBox="0 0 22 16" width="22px">
                     <use xlinkHref="#icon-heart"/>
