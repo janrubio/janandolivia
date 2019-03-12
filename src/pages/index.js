@@ -210,6 +210,15 @@ export default () =>
                 <svg viewBox="0 0 24 35" width="24px">
                     <use xlinkHref="#icon-rose"/>
                 </svg>
+                <svg viewBox="0 0 30 35" width="30px">
+                    <use xlinkHref="#icon-ceremony"/>
+                </svg>
+                <svg viewBox="0 0 33 35" width="33px">
+                    <use xlinkHref="#icon-balloons"/>
+                </svg>
+                <svg viewBox="0 0 31 35" width="31px">
+                    <use xlinkHref="#icon-dinner"/>
+                </svg>
             </div>
         </section>
 
