@@ -101,8 +101,91 @@ export default () =>
                 </div>
                 
                 <h2 className="heading heading--medium u-text-center u-mt4 u-mb4">
-                    here’s the plan for sunday, june 30th— it’s a good one.
+                    here’s the plan for sunday, june 30th&mdash; good times ahead.
                 </h2>
+
+                <div className="timeline">
+                    <div className="timeline__group">
+                        <div className="timeline__icon">
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-rings"/>
+                            </svg>
+                        </div>
+                        <div className="timeline__event">
+                            <div className="timeline__title heading heading--small">
+                                <span className="timeline__time">11 am</span>
+                                We say yes
+                            </div>
+                            <div className="timeline__description">
+                                ceremony to be held outdoors  in the wedding garden at 
+                                <br/>
+                                <span class="u-smallcaps">Queens Botanical Garden</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="timeline__group">
+                        <div className="timeline__icon">
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-drinks"/>
+                            </svg>
+                            <svg viewBox="0 0 24 38" width="24px">
+                                <use xlinkHref="#icon-food"/>
+                            </svg>
+                        </div>
+                        <div className="timeline__event">
+                            <div className="timeline__title heading heading--small">
+                                <span className="timeline__time">12 pm</span>
+                                We do brunch
+                            </div>
+                            <div className="timeline__description">
+                                post-ceremony brunch and drinks to be served  on the outdoor terrace at
+                                <br/>
+                                <span class="u-smallcaps">Queens Botanical Garden</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="timeline__group">
+                        <div className="timeline__icon">
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-rose"/>
+                            </svg>
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-bird"/>
+                            </svg>
+                        </div>
+                        <div className="timeline__event">
+                            <div className="timeline__title heading heading--small">
+                                <span className="timeline__time">3pm</span>
+                                We take a break
+                            </div>
+                            <div className="timeline__description">
+                                take a nap or explore the area,  do anything you like!
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="timeline__group">
+                        <div className="timeline__icon">
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-drinks"/>
+                            </svg>
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-food"/>
+                            </svg>
+                        </div>
+                        <div className="timeline__event">
+                            <div className="timeline__title heading heading--small">
+                                <span className="timeline__time">6pm</span>
+                                We celebrate
+                            </div>
+                            <div className="timeline__description">
+                                rejoin us for a banquet dinner reception, dancing, and more at the
+                                <br/>
+                                <span class="u-smallcaps">Royal Queen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
