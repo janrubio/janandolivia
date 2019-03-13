@@ -5,18 +5,11 @@
 .timeline__group {
     display: flex;
     justify-content: center;
-    // &:nth-child(even) {
-    //     // background: red;
-    //     .timeline__event {
-    //         order: 1;
-    //     }
-    //     .timeline__icon {
-    //         order: 2;
-    //     }
-    // }
 }
 
 .timeline__icon {
+    position: relative;
+    top: 1.25rem;
     padding: 1rem;
     min-width: 100px;
 
@@ -24,12 +17,12 @@
         min-width: 300px;
     }
 
-    .timeline__group:nth-child(odd) & {
+    .timeline__group:nth-child(even) & {
         @include breakpoint(medium) {
             text-align: right;
         }
     }
-    .timeline__group:nth-child(even) & {
+    .timeline__group:nth-child(odd) & {
         @include breakpoint(medium) {
             order: 2;
         }
@@ -43,7 +36,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    .timeline__group:nth-child(even) & {
+    .timeline__group:nth-child(odd) & {
         @include breakpoint(medium) {
             order: 1;
             border-left: initial;
@@ -71,7 +64,7 @@
         left: -5px;
     }
 
-    .timeline__group:nth-child(even) & {
+    .timeline__group:nth-child(odd) & {
         @include breakpoint(medium) {
             &::after {
                 left: initial;
@@ -104,7 +97,7 @@
         }
     }
 
-    .timeline__group:nth-child(even) & {
+    .timeline__group:nth-child(odd) & {
         @include breakpoint(large) {
             right: initial;
             left: -4.5rem;

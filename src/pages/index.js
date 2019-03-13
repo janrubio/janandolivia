@@ -107,6 +107,9 @@ export default () =>
                 <div className="timeline">
                     <div className="timeline__group">
                         <div className="timeline__icon">
+                            <svg viewBox="0 0 30 35" width="30px">
+                                <use xlinkHref="#icon-ceremony"/>
+                            </svg>
                             <svg viewBox="0 0 33 35" width="33px">
                                 <use xlinkHref="#icon-rings"/>
                             </svg>
@@ -128,7 +131,7 @@ export default () =>
                             <svg viewBox="0 0 33 35" width="33px">
                                 <use xlinkHref="#icon-drinks"/>
                             </svg>
-                            <svg viewBox="0 0 24 38" width="24px">
+                            <svg viewBox="0 0 33 35" width="33px">
                                 <use xlinkHref="#icon-food"/>
                             </svg>
                         </div>
@@ -146,7 +149,7 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 24 35" width="24px">
                                 <use xlinkHref="#icon-rose"/>
                             </svg>
                             <svg viewBox="0 0 33 35" width="33px">
@@ -166,11 +169,11 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 33 35" width="33px">
-                                <use xlinkHref="#icon-drinks"/>
+                            <svg viewBox="0 0 31 35" width="31px">
+                                <use xlinkHref="#icon-dinner"/>
                             </svg>
                             <svg viewBox="0 0 33 35" width="33px">
-                                <use xlinkHref="#icon-food"/>
+                                <use xlinkHref="#icon-balloons"/>
                             </svg>
                         </div>
                         <div className="timeline__event">
@@ -189,6 +192,7 @@ export default () =>
             </div>
         </section>
 
+        {/*
         <section>
             <div style={{textAlign: 'center'}}>
                 <svg viewBox="0 0 22 16" width="22px">
@@ -242,8 +246,8 @@ export default () =>
                 </article>
             </section>
         </section>
-
-        <footer>
+        */}
+        <footer class="u-mt1 u-mb1 u-text-center">
             Made with love by Jan & Olivia
         </footer>
     </Layout>
