@@ -1,7 +1,9 @@
 // Banner
 
-.banner{
-    border: 12px solid #fff;
+.banner {
+    border-bottom: 12px solid #fff;
+    border-left: 12px solid #fff;
+    border-right: 12px solid #fff;
     width: 100%;
     min-height: 450px;
     height: 100%;
@@ -28,6 +30,20 @@
     @include breakpoint(medium) {
         margin-bottom: 4rem;
         width: 60%;
+    }
+}
+
+.logo--small {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    width: 60%;
+
+    @include breakpoint(medium) {
+        width: 50%;
+    }
+
+    @include breakpoint(large) {
+        width: 22%;
     }
 }
 

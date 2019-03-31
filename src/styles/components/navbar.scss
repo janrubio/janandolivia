@@ -1,0 +1,98 @@
+.navbar {
+    background-color: #d9ebf5;
+    border-left: 12px solid #fff;
+    border-right: 12px solid #fff;
+    border-top: 12px solid #fff;
+}
+
+.navbar__links {
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 15px 0 15px;
+    padding: 20px 0 20px 0;
+}
+
+.navbar__link {
+    align-items: stretch;
+    color: $color-text;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    padding: 7px 0;
+    transition: background-color 100ms ease-in-out;
+
+    @include breakpoint(medium) {
+        padding: 7px 14px;
+    }
+}
+
+.navbar__link--active, .navbar__link:hover {
+    background-color: #ECF3F6;
+}
+
+.navbar__ordinal {
+    display: none;
+    font-family: $font-family-sans;
+    font-size: .5rem;
+    letter-spacing: 2px;
+
+    @include breakpoint(medium) {
+        display: inline;
+    }
+}
+
+.navbar__divider {
+    background-image: linear-gradient(
+                    to top left,
+                    rgba(0, 0, 0, 0) 45%,
+                    #153048,
+                    rgba(0, 0, 0, 0) 55%);
+    display: none;
+    margin-right: 8px;
+    width: 10px;
+
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
+
+.navbar__title {
+    display: none;
+    font-family: $font-family-sans;
+    font-size: .5rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
+
+.navbar__text {
+    display: block;
+    color: $deepnavy;
+    font-size: .8rem;
+    text-transform: uppercase;
+    line-height: .7rem;
+    padding-top: 6px;
+
+    @include breakpoint(medium) {
+        font-size: 1rem;
+    }
+}
+
+.navbar__link-divider {
+    background-image: linear-gradient(
+                    to top left,
+                    rgba(0, 0, 0, 0) 45%,
+                    #fff,
+                    rgba(0, 0, 0, 0) 55%);
+    display: block;
+    width: 18px;
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+}

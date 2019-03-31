@@ -5,6 +5,53 @@ import SvgIcons from "../components/svgIcons"
 export default () =>
     <Layout>
         <SvgIcons/>
+        <nav className="navbar">
+            <ul className="navbar__links">
+                <li>
+                    <a className="navbar__link" href="#a-story">
+                        <span className="navbar__ordinal">01</span>
+                        <div className="navbar__divider"></div>
+                        <div className="navbar__label">
+                            <span className="navbar__title">How We Got Here</span>
+                            <span className="navbar__text">A Story</span>
+                        </div>
+                    </a>
+                </li>
+                <li className="navbar__link-divider"></li>
+                <li>
+                    <a className="navbar__link" href="#the-plan">
+                        <span className="navbar__ordinal">02</span>
+                        <div className="navbar__divider"></div>
+                        <div className="navbar__label">
+                            <span className="navbar__title">What's Going Down</span>
+                            <span className="navbar__text">The Plan</span>
+                        </div>
+                    </a>
+                </li>
+                <li className="navbar__link-divider"></li>
+                <li>
+                    <a className="navbar__link" href="/rsvp">
+                        <span className="navbar__ordinal">03</span>
+                        <div className="navbar__divider"></div>
+                        <div className="navbar__label">
+                            <span className="navbar__title">You Coming?</span>
+                            <span className="navbar__text">RSVP</span>
+                        </div>
+                    </a>
+                </li>
+                <li className="navbar__link-divider"></li>
+                <li>
+                    <a className="navbar__link" href="https://www.amazon.com/wedding/share/jan-and-olivia" target="_blank" rel="noopener noreferrer">
+                        <span className="navbar__ordinal">04</span>
+                        <div className="navbar__divider"></div>
+                        <div className="navbar__label">
+                            <span className="navbar__title">A Wishlist of Sorts</span>
+                            <span className="navbar__text">Registry</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <div className="banner">
             <img className="logo" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
             <div className="banner__detail-group">
@@ -16,8 +63,8 @@ export default () =>
                 </div>
             </div>
         </div>
-        <div className="container u-mb12">
-            <section class="flex-container u-justify-center">
+        <div id="a-story" className="container u-mb12">
+            <section className="flex-container u-justify-center">
                 <div className="flex-item">
                     <article className="u-measure article u-mt3">
                         <h1 className="article__heading">
@@ -92,7 +139,7 @@ export default () =>
         </div>
 
         <section className="section u-fill--gray">
-            <div className="container">
+            <div id="the-plan" className="container">
                 
                 <div className="rolodex">
                     <div className="rolodex__card">06</div>
@@ -122,7 +169,7 @@ export default () =>
                             <div className="timeline__description">
                                 ceremony to be held outdoors  in the wedding garden at 
                                 <br/>
-                                <span class="u-smallcaps">Queens Botanical Garden</span>
+                                <span className="u-smallcaps">Queens Botanical Garden</span>
                             </div>
                         </div>
                     </div>
@@ -143,7 +190,7 @@ export default () =>
                             <div className="timeline__description">
                                 post-ceremony brunch and drinks to be served  on the outdoor terrace at
                                 <br/>
-                                <span class="u-smallcaps">Queens Botanical Garden</span>
+                                <span className="u-smallcaps">Queens Botanical Garden</span>
                             </div>
                         </div>
                     </div>
@@ -184,7 +231,7 @@ export default () =>
                             <div className="timeline__description">
                                 rejoin us for a banquet dinner reception, dancing, and more at the
                                 <br/>
-                                <span class="u-smallcaps">Royal Queen</span>
+                                <span className="u-smallcaps">Royal Queen</span>
                             </div>
                         </div>
                     </div>
@@ -247,7 +294,7 @@ export default () =>
             </section>
         </section>
         */}
-        <footer class="u-mt1 u-mb1 u-text-center">
+        <footer className="u-mt1 u-mb1 u-text-center">
             Made with love by Jan & Olivia
         </footer>
     </Layout>

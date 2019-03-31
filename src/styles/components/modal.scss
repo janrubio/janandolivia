@@ -1,0 +1,13 @@
+.modal {
+    align-content: center;
+    border: 1px solid #8a97a3;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.modal > span {
+    font-size: 2rem;
+    padding: 50px;
+}
