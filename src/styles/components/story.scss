@@ -83,6 +83,8 @@
 
 .story__polaroids {
     margin-top: 2rem;
+    overflow-x: hidden;
+    padding-bottom: 2rem;
 
     @include breakpoint(large) {
         margin-top: -6.5rem;
