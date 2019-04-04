@@ -141,8 +141,7 @@ class FormContainer extends React.Component {
 		if(this.state.display === 'showForm') {
 			return (
 				<Input 
-				handleChange={this.handleChange} 
-				handleSubmit={this.handleSubmit} 
+				handleChange={this.handleChange}  
 				handleNext={this.handleNext}
 				/>
 			)
