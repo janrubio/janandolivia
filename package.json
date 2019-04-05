@@ -33,6 +33,9 @@
     "url": "https://github.com/janrubio/janandolivia/issues"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "gatsby-plugin-eslint": "^2.0.4",
     "gh-pages": "^2.0.1"
   }
 }
