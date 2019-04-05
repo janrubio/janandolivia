@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 //takes person's info (obj - fullname, attending, diet) and displays it
 const Guest = (props) => {
 	return (
 		<div>
 			<p>{props.personInfo.fullName}</p>
-			<p>{props.personInfo.dietaryRestrictions === '' ? 'No dietary restrictions' : props.personInfo.dietaryRestrictions}</p>
+			<p>{props.personInfo.dietaryRestrictions}</p>
 			<div>
 				<span>{props.personInfo.attendingCeremony ? 'Yes - ' : 'No - '}</span>
 				<span>Ceremony and brunch reception</span>
@@ -16,7 +16,7 @@ const Guest = (props) => {
 				<span>Banquet dinner</span>
 			</div>
 		</div>
-	)
+	);
 }
 
-export default Guest
+export default Guest;

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Input = (props) => {
 	return (
 		<div>
 			<div>
 				<label htmlFor="fullName">Guest Name</label>
+				{/*className={props.error ? 'form__input-text is-error' : 'form__input-text'}*/}
 				<input type="text" id="fullName" name="fullName" onChange={props.handleChange}/>
+				{props.error && <p>You must fill out a name</p>}
 			</div>
 
 			<fieldset>
@@ -33,4 +35,4 @@ const Input = (props) => {
 	)
 }
 
-export default Input
+export default Input;
