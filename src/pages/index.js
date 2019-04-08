@@ -29,7 +29,7 @@ export default () =>
                     </a>
                 </li>
                 <li className="navbar__link-divider"></li>
-                <li>
+                {/*<li>
                     <a className="navbar__link" href="/rsvp">
                         <span className="navbar__ordinal">03</span>
                         <div className="navbar__divider"></div>
@@ -39,10 +39,10 @@ export default () =>
                         </div>
                     </a>
                 </li>
-                <li className="navbar__link-divider"></li>
+                <li className="navbar__link-divider"></li>*/}
                 <li>
                     <a className="navbar__link" href="https://www.amazon.com/wedding/share/jan-and-olivia" target="_blank" rel="noopener noreferrer">
-                        <span className="navbar__ordinal">04</span>
+                        <span className="navbar__ordinal">03</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">A Wishlist of Sorts</span>
@@ -140,13 +140,13 @@ export default () =>
 
         <section className="section u-fill--gray">
             <div id="the-plan" className="container">
-                
+
                 <div className="rolodex">
                     <div className="rolodex__card">06</div>
                     <div className="rolodex__card">30</div>
                     <div className="rolodex__card">19</div>
                 </div>
-                
+
                 <h2 className="heading heading--medium u-text-center u-mt4 u-mb4">
                     here’s the plan for sunday, june 30th&mdash; good times ahead.
                 </h2>
@@ -167,7 +167,7 @@ export default () =>
                                 We say yes
                             </div>
                             <div className="timeline__description">
-                                ceremony to be held outdoors  in the wedding garden at 
+                                ceremony to be held outdoors in the wedding garden at 
                                 <br/>
                                 <span className="u-smallcaps">Queens Botanical Garden</span>
                             </div>
@@ -209,7 +209,7 @@ export default () =>
                                 We take a break
                             </div>
                             <div className="timeline__description">
-                                take a nap or explore the area,  do anything you like!
+                                take a nap or explore the area, do anything you like!
                                 <br/>
                             </div>
                         </div>

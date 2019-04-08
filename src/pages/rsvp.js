@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SvgIcons from "../components/svgIcons"
+import FormContainer from "../components/form-container"
 
 export default () =>
     <Layout>
@@ -54,8 +55,6 @@ export default () =>
         </nav>
         <img className="logo logo--small" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
         <div className="modal">
-            <span>
-                Coming soon!
-            </span>
+            <FormContainer />
         </div>
     </Layout>
