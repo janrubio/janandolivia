@@ -10,6 +10,8 @@ const Summary = (props) => {
               personInfo={guest}
               />
       })}
+
+      {props.isSubmissionError && <p>There was an error. Please try submitting again.</p>}
       <input className="form-btn form-btn--fill" type="button" value="Add guest" onClick={props.handleAddGuest} />
       <input className="form-btn" type="submit" value="Send RSVP" />
     </div>
