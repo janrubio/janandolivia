@@ -5,9 +5,9 @@ const Input = (props) => {
     <div className="form__controls">
       <div className="control__textbox-group">
         <label className="control__textbox-label" htmlFor="fullName">Guest Name</label>
-        {/* className={props.error ? 'form__input-text is-error' : 'form__input-text'} */}
+        {/* className={props.isInvalidName ? 'form__input-text is-error' : 'form__input-text'} */}
         <input className="control__textbox-input" type="text" id="fullName" name="fullName" onChange={props.handleChange} />
-        {props.error && <p>You must fill out a name</p>}
+        {props.isInvalidName && <p>You must fill out a name</p>}
       </div>
 
       <fieldset className="control__attendance-group">

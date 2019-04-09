@@ -2,8 +2,11 @@ import React from 'react';
 import Input from './input';
 import Summary from './summary';
 import Result from './result';
+import LoadingIcon from './loading-icon';
 
 const uuid = require('uuid');
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 class FormContainer extends React.Component {
   state = {
@@ -13,7 +16,8 @@ class FormContainer extends React.Component {
     dietaryRestrictions: '',
     guestList: [],
     display: 'showForm',
-    error: false,
+    isInvalidName: false,
+    isSubmissionError: false,
   }
 
   /* Creates request to be sent to api */
@@ -35,22 +39,40 @@ class FormContainer extends React.Component {
   handleSubmit = async (e) =>{
     e.preventDefault();
 
-    const requestBody = this.buildRequestBody(this.state);
+    this.setState({
+      display: 'showLoader',
+    });
 
-    const response = await fetch('https://shptockpog.execute-api.us-east-1.amazonaws.com/dev/responses/accept', {
+    const requestBody = this.buildRequestBody(this.state);
+    try {
+      const response = await fetch('https://shptockpog.execute-api.us-east-1.amazonaws.com/dev/responses/accept', {
       'headers': {
         'Content-Type': 'application/json'
       },
-      'method': 'POST',
+      'method': 'POS',
       'body': JSON.stringify(requestBody)
-    });
+      });
 
-    const data = await response.json();
-    console.log(data);
+      //In case of http errors
+      if(!response.ok) {
+        throw Error(response.statusText);
+      }
 
-    this.setState({
-      display: 'showResult',
-    })
+      const data = await response.json();
+      console.log(data);
+      this.setState({
+        isSubmissionError: false,
+        display: 'showResult',
+      });
+
+      //In case of network errors
+    } catch (err) {
+      console.log(err)
+      this.setState({
+        isSubmissionError: true,
+        display: 'showSummary',
+      });
+    }
   }
 
   /* Reset state for new guest */
@@ -66,13 +88,13 @@ class FormContainer extends React.Component {
 
   /* Validates fullName and puts guest in guest list*/
   handleNext = () => {
-    const invalidName = this.state.fullName.trim() === '';
+    const isName = this.state.fullName.trim() === '';
     this.setState({
-      error: invalidName,
+      isInvalidName: isName,
     })
 
-    if(invalidName) { return; }
-    else{
+    if(isName) { return; }
+    else {
       const newGuest = this.buildGuest(this.state);
       this.setState(prevState => ({
         guestList: [...prevState.guestList, newGuest],
@@ -107,7 +129,7 @@ class FormContainer extends React.Component {
           <Input
           handleChange={this.handleChange}
           handleNext={this.handleNext}
-          error={this.state.error}
+          isInvalidName={this.state.isInvalidName}
           />
         );
       case 'showSummary':
@@ -115,11 +137,16 @@ class FormContainer extends React.Component {
           <Summary
           guestInfo={this.state.guestList}
           handleAddGuest={this.handleAddGuest}
+          isSubmissionError={this.state.isSubmissionError}
           />
         );
       case 'showResult':
         return (
           <Result />
+        );
+      case 'showLoader':
+        return (
+          <LoadingIcon />
         );
     }
   }
