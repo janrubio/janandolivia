@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{135:function(e,n,a){"use strict";a.r(n);var t=a(0),c=a.n(t),o=(a(136),function(e){var n=e.children;return c.a.createElement("div",{class:"grid-container"},n)});n.default=function(){return c.a.createElement(o,null,c.a.createElement("div",{className:"logo"},c.a.createElement("div",{className:"logo__container"},c.a.createElement("img",{src:"/janandolivia_logo.svg",alt:"Logo"}))))}},136:function(e,n,a){}}]);
-//# sourceMappingURL=component---src-pages-index-js-6f2b9c4d11c39b2dbe51.js.map
