@@ -1,5 +1,4 @@
 module.exports = {
-    pathPrefix: "/janandolivia",
     plugins: [
         
         'gatsby-plugin-sass',

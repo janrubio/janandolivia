@@ -10,7 +10,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^2.3.4",
@@ -33,9 +33,6 @@
     "url": "https://github.com/janrubio/janandolivia/issues"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-loader": "^2.1.2",
-    "gatsby-plugin-eslint": "^2.0.4",
     "gh-pages": "^2.0.1"
   }
 }
