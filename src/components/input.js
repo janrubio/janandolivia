@@ -7,8 +7,10 @@ const Input = (props) => {
 
       <div className="form__controls">
         <div className="control__textbox-group">
-          <label className="control__textbox-label" htmlFor="fullName">Guest Name</label>
-          <input className="control__textbox-input" type="text" id="fullName" name="fullName" onChange={props.handleChange} />
+          <label className="control__textbox-label" htmlFor="fullName">
+            {props.guestNum === 0 ? "Guest Name" : `Guest ${props.guestNum}'s name`}
+          </label>
+          <input className="control__textbox-input" type="text" id="fullName" name="fullName" value={props.guestNameValue} onChange={props.handleChange} />
           {props.isInvalidName && <p className="is-error">Guest name is required.</p>}
         </div>
 

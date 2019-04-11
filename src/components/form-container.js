@@ -2,7 +2,7 @@ import React from 'react';
 import Input from './input';
 import Summary from './summary';
 import Result from './result';
-import LoadingIcon from './loading-icon';
+//import LoadingIcon from './loading-icon';
 import '../styles/rsvp.css'
 
 const uuid = require('uuid');
@@ -20,6 +20,8 @@ class FormContainer extends React.Component {
     isInvalidName: false,
     isSubmissionError: false,
     isLoading: false,
+    isEdit: false,
+    editGuestNum: 0,
   }
 
   /* Creates request to be sent to api */
@@ -40,8 +42,6 @@ class FormContainer extends React.Component {
   /* Submits form to api */
   handleSubmit = async (e) =>{
     e.preventDefault();
-
-    console.log(e.target)
 
     this.setState({
       isLoading: true,
@@ -83,30 +83,82 @@ class FormContainer extends React.Component {
 
   /* Reset state for new guest */
   handleAddGuest = () => {
+    console.log(this.state)
     this.setState({
       fullName: '',
       attendingCeremony: false,
       attendingBanquet: false,
       dietaryRestrictions: '',
+      isEdit: false,
+      editGuestNum: 0,
       display: 'showForm',
     });
   }
 
+  /* Remove guest from guest list */
+  handleRemoveGuest = () => {
+    const indexOfCurrentGuest = this.state.editGuestNum - 1;
+    const guestListCopy = [...this.state.guestList];
+    guestListCopy.splice(indexOfCurrentGuest, 1);
+
+    this.setState({
+      guestList: guestListCopy,
+      isEdit: false,
+      editGuestNum: 0,
+      display: 'showSummary',
+    })
+  }
+
   /* Validates fullName and puts guest in guest list*/
   handleNext = () => {
-    const isName = this.state.fullName.trim() === '';
+    const isInvalid = this.state.fullName.trim() === '';
     this.setState({
-      isInvalidName: isName,
+      isInvalidName: isInvalid,
     })
 
-    if(isName) { return; }
-    else {
-      const newGuest = this.buildGuest(this.state);
-      this.setState(prevState => ({
-        guestList: [...prevState.guestList, newGuest],
-        display: 'showSummary',
-      }));
+    switch(isInvalid) {
+      case false:
+        const newGuest = this.buildGuest(this.state)
+        switch(this.state.isEdit) {
+          case true:
+            const indexOfCurrentGuest = this.state.editGuestNum - 1;
+            const guestListCopy = [...this.state.guestList];
+            guestListCopy.splice(indexOfCurrentGuest, 1, newGuest)
+
+            this.setState(prevState => ({
+              guestList: guestListCopy,
+              isEdit: false,
+              editGuestNum: 0,
+              display: 'showSummary',
+            }))
+            break;
+          case false:
+            this.setState(prevState => ({
+              guestList: [...prevState.guestList, newGuest],
+              isEdit: false,
+              editGuestNum: 0,
+              display: 'showSummary',
+            }));
+            break;
+        }
+      default:
+        return;
     }
+  }
+
+  /* Sets state for editing and keeps name */
+  handleEdit = (e, personInfo, guestNum) => {
+    const { fullName } = personInfo
+
+    this.setState({
+      fullName: fullName,
+      attendingCeremony: false,
+      attendingBanquet: false,
+      dietaryRestrictions: "",
+      isEdit: true,
+      editGuestNum: guestNum,
+      display: 'showForm',
+    });
   }
 
   /* Tracks state of input */
@@ -139,6 +191,7 @@ class FormContainer extends React.Component {
   renderHeaderSubtitle = () => {
     const numGuests = this.state.guestList.length;
     const attending = this.isAttending();
+    const currentGuest = this.state.editGuestNum;
 
     switch(this.state.display) {
       case "showSummary":
@@ -153,23 +206,43 @@ class FormContainer extends React.Component {
           case true:
             return "Hurray! Can't wait to see you on the big day!"
         }
+      case "showForm":
+        switch(this.state.isEdit) {
+          case true:
+            return `Guest ${currentGuest}`
+        }
       default:
         return "Jan and Olivia's celebration on June 30th, 2019"
     }
   }
 
-  /* Renders form footer based on display and isLoading */
+  /* Renders form footer based on display, isLoading, and guest # */
   renderFooter = () => {
+    const isLeader = this.state.editGuestNum === 1;
     switch(this.state.display) {
       case "showForm":
-        return (
-            <button className="form-btn" type="button" onClick={this.handleNext}>Continue</button>
-        )
+        switch(this.state.isEdit){
+          case true:
+            switch(isLeader) {
+              //Only show remove when editing guest #2+
+              case false:
+                return (
+                  <React.Fragment>
+                    <button className="form-btn form-btn--white" type="button" onClick={this.handleRemoveGuest}>Remove this guest</button>
+                    <button className="form-btn" type="button" onClick={this.handleNext}>Continue</button>
+                  </React.Fragment>
+                )
+            }
+          default:
+            return (
+              <button className="form-btn" type="button" onClick={this.handleNext}>Continue</button>
+            )
+        }
       case "showSummary":
         switch(this.state.isLoading) {
           case true:
             return (
-              <LoadingIcon />
+              <button className="form-btn is-loading" type="button">...</button>
             )
           case false:
             return (
@@ -193,6 +266,8 @@ class FormContainer extends React.Component {
           <Input
           handleChange={this.handleChange}
           handleNext={this.handleNext}
+          guestNameValue={this.state.fullName}
+          guestNum={this.state.editGuestNum}
           isInvalidName={this.state.isInvalidName}
           renderFooter={this.renderFooter}
           />
@@ -202,6 +277,7 @@ class FormContainer extends React.Component {
           <Summary
           guestInfo={this.state.guestList}
           handleAddGuest={this.handleAddGuest}
+          handleEdit={this.handleEdit}
           isSubmissionError={this.state.isSubmissionError}
           renderFooter={this.renderFooter}
           />
@@ -229,7 +305,6 @@ class FormContainer extends React.Component {
 
         <form onSubmit={this.handleSubmit}>
           { this.renderComponents() }
-
         </form>
       </div>
     );
