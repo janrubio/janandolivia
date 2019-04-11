@@ -110,9 +110,14 @@
   margin: .5rem 0;
 }
 
+.guest__heading {
+  display: flex;
+}
+
 .guest__title {
   text-transform: uppercase;
   margin: 0;
+  flex-grow: 1
 }
 
 .guest__detail {
@@ -161,4 +166,12 @@
   background-color: #fff;
   color: #26364f;
   border: 1px solid #26364f;
+}
+
+.form-btn--edit {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0;
+  margin: 0;
 }

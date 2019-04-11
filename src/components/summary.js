@@ -8,10 +8,12 @@ const Summary = (props) => {
     <div className="form__body">
 
       <div className="form__guest-summary">
-        {props.guestInfo.map(guest => {
+        {props.guestInfo.map((guest, i) => {
           return <Guest
                 key={guest.id}
                 personInfo={guest}
+                handleEdit={props.handleEdit}
+                guestNum={i+1}
                 />
         })}
 
