@@ -2,7 +2,6 @@ import React from 'react';
 import Input from './input';
 import Summary from './summary';
 import Result from './result';
-//import LoadingIcon from './loading-icon';
 import '../styles/rsvp.css'
 
 const uuid = require('uuid');
@@ -83,7 +82,6 @@ class FormContainer extends React.Component {
 
   /* Reset state for new guest */
   handleAddGuest = () => {
-    console.log(this.state)
     this.setState({
       fullName: '',
       attendingCeremony: false,
