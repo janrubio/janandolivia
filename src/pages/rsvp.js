@@ -54,7 +54,5 @@ export default () =>
             </ul>
         </nav>
         <img className="logo logo--small" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
-        <div className="modal">
             <FormContainer />
-        </div>
     </Layout>
