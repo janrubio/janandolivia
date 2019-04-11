@@ -1,7 +1,6 @@
 import React from 'react';
 import Guest from './guest';
 import FormFooter from './form-footer';
-import LoadingIcon from './loading-icon';
 
 const Summary = (props) => {
   return(
