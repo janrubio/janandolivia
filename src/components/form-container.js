@@ -3,6 +3,7 @@ import Input from './input';
 import Summary from './summary';
 import Result from './result';
 import LoadingIcon from './loading-icon';
+import '../styles/rsvp.css'
 
 const uuid = require('uuid');
 require('es6-promise').polyfill();
@@ -18,6 +19,7 @@ class FormContainer extends React.Component {
     display: 'showForm',
     isInvalidName: false,
     isSubmissionError: false,
+    isLoading: false,
   }
 
   /* Creates request to be sent to api */
@@ -39,12 +41,15 @@ class FormContainer extends React.Component {
   handleSubmit = async (e) =>{
     e.preventDefault();
 
+    console.log(e.target)
+
     this.setState({
-      display: 'showLoader',
+      isLoading: true,
     });
 
     const requestBody = this.buildRequestBody(this.state);
     try {
+      //Test http errors - https://httpstat.us/500
       const response = await fetch('https://shptockpog.execute-api.us-east-1.amazonaws.com/dev/responses/accept', {
       'headers': {
         'Content-Type': 'application/json'
@@ -62,6 +67,7 @@ class FormContainer extends React.Component {
       console.log(data);
       this.setState({
         isSubmissionError: false,
+        isLoading: false,
         display: 'showResult',
       });
 
@@ -70,7 +76,7 @@ class FormContainer extends React.Component {
       console.log(err)
       this.setState({
         isSubmissionError: true,
-        display: 'showSummary',
+        isLoading: false,
       });
     }
   }
@@ -121,32 +127,91 @@ class FormContainer extends React.Component {
     }
   }
 
+  /* Checks if party is attending */
+  isAttending = () => {
+    if(this.state.guestList.length) {
+      const leader = this.state.guestList[0];
+      return (leader.attendingBanquet || leader.attendingCeremony)
+    }
+  }
+
+  /* Renders subtitle of form header based on display, attendance, and # of guests */
+  renderHeaderSubtitle = () => {
+    const numGuests = this.state.guestList.length;
+    const attending = this.isAttending();
+
+    switch(this.state.display) {
+      case "showSummary":
+        switch(numGuests) {
+          case 1:
+            return "You've added 1 person to your party so far."
+          default:
+            return `You've added ${numGuests} people to your party so far.`
+        }
+      case "showResult":
+        switch(attending) {
+          case true:
+            return "Hurray! Can't wait to see you on the big day!"
+        }
+      default:
+        return "Jan and Olivia's celebration on June 30th, 2019"
+    }
+  }
+
+  /* Renders form footer based on display and isLoading */
+  renderFooter = () => {
+    switch(this.state.display) {
+      case "showForm":
+        return (
+            <button className="form-btn" type="button" onClick={this.handleNext}>Continue</button>
+        )
+      case "showSummary":
+        switch(this.state.isLoading) {
+          case true:
+            return (
+              <LoadingIcon />
+            )
+          case false:
+            return (
+                <button className="form-btn" type="submit">Submit</button>
+            )
+        }
+      case "showResult":
+        return (
+          <a className="result__link" href="/">
+            <button className="form-btn" type="button">Wedding details</button>
+          </a>
+        )
+    }
+  }
+
   /* Renders component based on display state */
   renderComponents = () => {
     switch(this.state.display) {
-      case 'showForm':
+      case "showForm":
         return (
           <Input
           handleChange={this.handleChange}
           handleNext={this.handleNext}
           isInvalidName={this.state.isInvalidName}
+          renderFooter={this.renderFooter}
           />
         );
-      case 'showSummary':
+      case "showSummary":
         return (
           <Summary
           guestInfo={this.state.guestList}
           handleAddGuest={this.handleAddGuest}
           isSubmissionError={this.state.isSubmissionError}
+          renderFooter={this.renderFooter}
           />
         );
-      case 'showResult':
+      case "showResult":
         return (
-          <Result />
-        );
-      case 'showLoader':
-        return (
-          <LoadingIcon />
+          <Result
+          guestInfo={this.state.guestList}
+          renderFooter={this.renderFooter}
+          />
         );
     }
   }
@@ -154,12 +219,17 @@ class FormContainer extends React.Component {
   render() {
     return (
       <div className="form-container">
+
         <div className="form__header">
-          <h2>RSVP</h2>
-          <p>please confirm your plans to attend by May 20th</p>
+          <h1 className="header__title">Rsvp</h1>
+          <p className="header__subtitle">
+            { this.renderHeaderSubtitle() }
+          </p>
         </div>
-        <form className="form__body" onSubmit={this.handleSubmit}>
+
+        <form onSubmit={this.handleSubmit}>
           { this.renderComponents() }
+
         </form>
       </div>
     );

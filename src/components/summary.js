@@ -1,19 +1,27 @@
 import React from 'react';
 import Guest from './guest';
+import FormFooter from './form-footer';
+import LoadingIcon from './loading-icon';
 
 const Summary = (props) => {
   return(
-    <div className="form__guest-summary">
-      {props.guestInfo.map(guest => {
-        return <Guest
-              key={guest.id}
-              personInfo={guest}
-              />
-      })}
+    <div className="form__body">
 
-      {props.isSubmissionError && <p>There was an error. Please try submitting again.</p>}
-      <input className="form-btn form-btn--fill" type="button" value="Add guest" onClick={props.handleAddGuest} />
-      <input className="form-btn" type="submit" value="Send RSVP" />
+      <div className="form__guest-summary">
+        {props.guestInfo.map(guest => {
+          return <Guest
+                key={guest.id}
+                personInfo={guest}
+                />
+        })}
+
+        <button className="form-btn form-btn--white" type="button" onClick={props.handleAddGuest}>Add another guest</button>
+        {props.isSubmissionError && <p className="is-error">There was an error. Please try submitting again.</p>}
+      </div>
+
+      <FormFooter
+      renderFooter={props.renderFooter}
+      />
     </div>
   );
 }
