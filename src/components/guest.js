@@ -12,7 +12,7 @@ const Guest = (props) => {
       </div>
 
       <div className="guest__attendance">
-        <span className="guest__choice-img">{props.personInfo.attendingBanquet ? 'Yes ' : 'No '}</span>
+        <span className="guest__choice-icon">{props.personInfo.attendingBanquet ? 'Yes ' : 'No '}</span>
         <span className="guest__choice">{props.personInfo.attendingBanquet ? 'Attending ' : 'Not attending '}</span>
         <span className="guest__event">Banquet Dinner</span>
       </div>
