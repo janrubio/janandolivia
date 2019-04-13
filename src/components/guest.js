@@ -15,14 +15,12 @@ const Guest = (props) => {
       <p className="guest__detail">{props.personInfo.dietaryRestrictions}</p>
       <div className="guest__attendance">
         { props.renderGuestChoice(props.personInfo.attendingCeremony) }
-        <span className="guest__choice">{props.personInfo.attendingCeremony ? 'Attending' : 'Not attending'}&nbsp;</span>
-        <span className="guest__event">Ceremony & Brunch Reception</span>
+        <span className="guest__event">{props.personInfo.attendingCeremony ? 'Attending' : 'Not attending'}&nbsp;Ceremony & Brunch Reception</span>
       </div>
 
       <div className="guest__attendance">
         { props.renderGuestChoice(props.personInfo.attendingBanquet) }
-        <span className="guest__choice">{props.personInfo.attendingBanquet ? 'Attending' : 'Not attending'}&nbsp;</span>
-        <span className="guest__event">Banquet Dinner</span>
+        <span className="guest__event">{props.personInfo.attendingBanquet ? 'Attending' : 'Not attending'}&nbsp;Banquet Dinner</span>
       </div>
     </div>
   );
