@@ -2,7 +2,6 @@ import React from 'react';
 import Input from './input';
 import Summary from './summary';
 import Result from './result';
-import '../styles/rsvp.css'
 
 const uuid = require('uuid');
 require('es6-promise').polyfill();
@@ -146,13 +145,22 @@ class FormContainer extends React.Component {
 
   /* Sets state for editing and keeps name */
   handleEdit = (e, personInfo, guestNum) => {
-    const { fullName } = personInfo
+    let { fullName, attendingCeremony, attendingBanquet, dietaryRestrictions } = personInfo;
+
+    if (dietaryRestrictions === 'No dietary restrictions') {
+      dietaryRestrictions = '';
+    }
+
+    console.dir(personInfo)
+    console.warn(attendingCeremony)
+    console.warn(attendingBanquet)
+    console.warn(dietaryRestrictions)
 
     this.setState({
       fullName: fullName,
-      attendingCeremony: false,
-      attendingBanquet: false,
-      dietaryRestrictions: "",
+      attendingCeremony: attendingCeremony,
+      attendingBanquet: attendingBanquet,
+      dietaryRestrictions: dietaryRestrictions,
       isEdit: true,
       editGuestNum: guestNum,
       display: 'showForm',
@@ -164,10 +172,14 @@ class FormContainer extends React.Component {
     let name = '';
 
     if(e.target.type === 'checkbox') {
-      name = e.target.value
-      this.setState(prevState => ({
+      name = e.target.name
+      console.warn('check');
+      console.warn(name);
+      this.setState(prevState => {
+          console.warn(prevState);
+          return {
         [name]: !prevState[name],
-      }));
+      }});
     }
     else {
       name = e.target.name
@@ -226,33 +238,77 @@ class FormContainer extends React.Component {
               case false:
                 return (
                   <React.Fragment>
-                    <button className="form-btn form-btn--white" type="button" onClick={this.handleRemoveGuest}>Remove this guest</button>
-                    <button className="form-btn" type="button" onClick={this.handleNext}>Continue</button>
+                    <button className="form-btn form-btn--white form-btn__remove" type="button" onClick={this.handleRemoveGuest}>Remove this guest</button>
+                    <button className="form-btn" type="button" onClick={this.handleNext}>
+                      Continue
+                      <svg width="16" height="8" xmlns="http://www.w3.org/2000/svg" className="icon-arrow">
+                        <path d="M12.01 3.05H0v2h12.01v3l3.99-4-3.99-4v3z" fill="#FFF" fillRule="nonzero"/>
+                      </svg>
+                    </button>
                   </React.Fragment>
                 )
             }
           default:
             return (
-              <button className="form-btn" type="button" onClick={this.handleNext}>Continue</button>
+              <button className="form-btn" type="button" onClick={this.handleNext}>
+                Continue
+                <svg width="16" height="8" xmlns="http://www.w3.org/2000/svg" className="icon-arrow">
+                  <path d="M12.01 3.05H0v2h12.01v3l3.99-4-3.99-4v3z" fill="#FFF" fillRule="nonzero"/>
+                </svg>
+              </button>
             )
         }
       case "showSummary":
         switch(this.state.isLoading) {
           case true:
             return (
-              <button className="form-btn is-loading" type="button">...</button>
+              <button className="form-btn is-loading" type="button">
+                <svg width="31" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#FFF" fillRule="evenodd">
+                    <circle cx="2.5" cy="2.5" r="2.5"/>
+                    <circle cx="15.5" cy="2.5" r="2.5"/>
+                    <circle cx="28.5" cy="2.5" r="2.5"/>
+                  </g>
+                </svg>
+              </button>
             )
           case false:
             return (
-                <button className="form-btn" type="submit">Submit</button>
+                <button className="form-btn" type="submit">
+                  Send RSVP
+                  <svg width="16" height="8" xmlns="http://www.w3.org/2000/svg" className="icon-arrow">
+                    <path d="M12.01 3.05H0v2h12.01v3l3.99-4-3.99-4v3z" fill="#FFF" fillRule="nonzero"/>
+                  </svg>
+                </button>
             )
         }
       case "showResult":
         return (
           <a className="result__link" href="/">
-            <button className="form-btn" type="button">Wedding details</button>
+            <button className="form-btn" type="button">
+              Wedding details
+              <svg width="16" height="8" xmlns="http://www.w3.org/2000/svg" className="icon-arrow">
+                <path d="M12.01 3.05H0v2h12.01v3l3.99-4-3.99-4v3z" fill="#FFF" fillRule="nonzero"/>
+              </svg>
+            </button>
           </a>
         )
+    }
+  }
+
+  renderGuestChoice = (attendingEvent) => {
+    if (attendingEvent) {
+      return (
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="guest__choice-icon">
+            <path d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8.01 8.01 0 0 1 0-16 8.01 8.01 0 0 1 0 16zm4.59-12.42L8 12.17 5.41 9.59 4 11l4 4 8-8-1.41-1.42z" fill="#A2C3D4" fillRule="nonzero"/>
+          </svg>
+      );
+    } else {
+      return (
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" className="guest__choice-icon">
+            <path d="M10 0a10 10 0 1 0 0 20 10 10 0 1 0 0-20zm0 18a8.01 8.01 0 0 1 0-16 8.01 8.01 0 0 1 0 16zm3.59-13L10 8.59 6.41 5 5 6.41 8.59 10 5 13.59 6.41 15 10 11.41 13.59 15 15 13.59 11.41 10 15 6.41 13.59 5z" fill="#DE8787" fillRule="nonzero"/>
+          </svg>
+      );
     }
   }
 
@@ -265,6 +321,9 @@ class FormContainer extends React.Component {
           handleChange={this.handleChange}
           handleNext={this.handleNext}
           guestNameValue={this.state.fullName}
+          dietaryRestrictionsValue={this.state.dietaryRestrictions}
+          attendingCeremonyValue={this.state.attendingCeremony}
+          attendingBanquetValue={this.state.attendingBanquet}
           guestNum={this.state.editGuestNum}
           isInvalidName={this.state.isInvalidName}
           renderFooter={this.renderFooter}
@@ -277,6 +336,7 @@ class FormContainer extends React.Component {
           handleAddGuest={this.handleAddGuest}
           handleEdit={this.handleEdit}
           isSubmissionError={this.state.isSubmissionError}
+          renderGuestChoice={this.renderGuestChoice}
           renderFooter={this.renderFooter}
           />
         );

@@ -1,9 +1,32 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SvgIcons from "../components/svgIcons"
 
 export default () =>
     <Layout>
+        <Helmet>
+            <title>jan & olivia</title>
+
+            <link rel="icon" href="/favicon/favicon-32.png" sizes="32x32"/>
+            <link rel="icon" href="/favicon/favicon-57.png" sizes="57x57"/>
+            <link rel="icon" href="/favicon/favicon-76.png" sizes="76x76"/>
+            <link rel="icon" href="/favicon/favicon-96.png" sizes="96x96"/>
+            <link rel="icon" href="/favicon/favicon-128.png" sizes="128x128"/>
+            <link rel="icon" href="/favicon/favicon-192.png" sizes="192x192"/>
+            <link rel="icon" href="/favicon/favicon-228.png" sizes="228x228"/>
+
+            <link rel="shortcut icon" sizes="196x196" href="/favicon/favicon-196.png"/>
+
+            <link rel="apple-touch-icon" href="/favicon/favicon-120.png" sizes="120x120"/>
+            <link rel="apple-touch-icon" href="/favicon/favicon-152.png" sizes="152x152"/>
+            <link rel="apple-touch-icon" href="/favicon/favicon-180.png" sizes="180x180"/>
+
+            <meta name="msapplication-TileColor" content="#FFFFFF"/>
+            <meta name="msapplication-TileImage" content="/favicon/favicon-144.png"/>
+
+            <meta name="msapplication-config" content="/favicon/browserconfig.xml"/>
+        </Helmet>
         <SvgIcons/>
         <nav className="navbar">
             <ul className="navbar__links">
@@ -29,7 +52,7 @@ export default () =>
                     </a>
                 </li>
                 <li className="navbar__link-divider"></li>
-                {/*<li>
+                <li>
                     <a className="navbar__link" href="/rsvp">
                         <span className="navbar__ordinal">03</span>
                         <div className="navbar__divider"></div>
@@ -39,7 +62,7 @@ export default () =>
                         </div>
                     </a>
                 </li>
-                <li className="navbar__link-divider"></li>*/}
+                <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link" href="https://www.amazon.com/wedding/share/jan-and-olivia" target="_blank" rel="noopener noreferrer">
                         <span className="navbar__ordinal">03</span>
@@ -62,6 +85,7 @@ export default () =>
                     Queens, <span className="u-hide-for-medium">NY</span><span className="u-show-for-medium">New York</span>
                 </div>
             </div>
+            <a href="/rsvp" class="btn__rsvp">RSVP</a>
         </div>
         <div id="a-story" className="container u-mb12">
             <section className="flex-container u-justify-center">
@@ -235,6 +259,9 @@ export default () =>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="rsvp-container">
+                    <a href="/rsvp" className="btn__rsvp">RSVP</a>
                 </div>
             </div>
         </section>

@@ -18,26 +18,28 @@ const Input = (props) => {
           <legend className="control__checkbox-legend">Which events will this guest be attending?</legend>
 
           <div className="control__checkbox-group">
-            <input className="control__checkbox-input" type="checkbox" id="attend-1" name="attendance" value="attendingCeremony" onChange={props.handleChange} />
-            <div className="control__checkbox-description">
-              <label className="control__checkbox-label" htmlFor="attend-1">Ceremony & Brunch Reception</label>
-              <p className="control__checkbox-caption">11am, Queens Botanical Garden</p>
-            </div>
+            <input className="control__checkbox-input" type="checkbox" id="attend-1" name="attendingCeremony" defaultChecked={props.attendingCeremonyValue} onChange={props.handleChange} />
+            <label className="control__checkbox-description" htmlFor="attend-1">
+              <span className="control__checkbox-label">Ceremony & Brunch Reception</span>
+              <br/>
+              <span className="control__checkbox-caption">11am, Queens Botanical Garden</span>
+            </label>
           </div>
 
           <div className="control__checkbox-group">
-            <input className="control__checkbox-input" type="checkbox" id="attend-2" name="attendance" value="attendingBanquet" onChange={props.handleChange} />
-              <div className="control__checkbox-description">
-                <label className="control__checkbox-label" htmlFor="attend-2">Banquet Dinner</label>
-                <p className="control__checkbox-caption">6pm, Royal Queen</p>
-              </div>
+            <input className="control__checkbox-input" type="checkbox" id="attend-2" name="attendingBanquet" defaultChecked={props.attendingBanquetValue} onChange={props.handleChange} />
+              <label className="control__checkbox-description" htmlFor="attend-2">
+                <span className="control__checkbox-label">Banquet Dinner</span>
+                <br/>
+                <span className="control__checkbox-caption">6pm, Royal Queen</span>
+              </label>
           </div>
         </fieldset>
 
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="dietaryRestrictions">Any dietary restrictions?</label>
           <label className="control__textbox-caption" htmlFor="dietaryRestrictions">For example: vegetarian, seafood allergy, etc.</label>
-          <input className="control__textbox-input" type="text" id="dietaryRestrictions" name="dietaryRestrictions" onChange={props.handleChange} />
+          <input className="control__textbox-input" type="text" id="dietaryRestrictions" name="dietaryRestrictions" value={props.dietaryRestrictionsValue} onChange={props.handleChange} />
         </div>
       </div>
 

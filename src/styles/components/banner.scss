@@ -37,14 +37,8 @@
     margin-bottom: 4rem;
     margin-top: 3rem;
     width: 60%;
-
-    @include breakpoint(medium) {
-        width: 50%;
-    }
-
-    @include breakpoint(large) {
-        width: 22%;
-    }
+    max-width: 250px;
+    min-width: 200px;
 }
 
 .banner__detail-group {
