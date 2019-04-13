@@ -85,7 +85,7 @@ export default () =>
                     Queens, <span className="u-hide-for-medium">NY</span><span className="u-show-for-medium">New York</span>
                 </div>
             </div>
-            <a href="/rsvp" class="btn__rsvp">RSVP</a>
+            <a href="/rsvp" class="btn__rsvp btn-version-1">RSVP</a>
         </div>
         <div id="a-story" className="container u-mb12">
             <section className="flex-container u-justify-center">
