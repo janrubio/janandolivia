@@ -71,7 +71,7 @@
 /* Input.js */
 
 .form__controls {
-    margin: 3.5rem 2.8rem;
+    margin: 3.5rem 1.5rem;
 
     @include breakpoint(medium) {
         margin: 3.5rem 5rem;
@@ -113,6 +113,7 @@
 
 .control__checkbox-description {
     display: inline-block;
+    white-space: nowrap;
 }
 
 .control__textbox-caption {
@@ -134,12 +135,16 @@
     color: #919191;
     margin: 0 0 0 30px;
     line-height: 30px;
-    font-size: .9rem;
+    font-size: .8rem;
     text-transform: uppercase;
     font-variant-numeric: lining-nums;
     -moz-font-feature-settings: "lnum";
     -webkit-font-feature-settings: "lnum";
     font-feature-settings: "lnum";
+
+    @include breakpoint(320px) {
+        font-size: .9rem;
+    }
 }
 
 .form-container :not(#foo) .control__checkbox-group input[type="checkbox"] {
