@@ -191,7 +191,7 @@ export default () =>
                                 We say yes
                             </div>
                             <div className="timeline__description">
-                                ceremony to be held outdoors  in the wedding garden at 
+                                ceremony to be held outdoors in the wedding garden at
                                 <br/>
                                 <span className="u-smallcaps">Queens Botanical Garden</span>
                             </div>
@@ -212,7 +212,7 @@ export default () =>
                                 We do brunch
                             </div>
                             <div className="timeline__description">
-                                post-ceremony brunch and drinks to be served  on the outdoor terrace at
+                                post-ceremony brunch and drinks to be served on the outdoor terrace at
                                 <br/>
                                 <span className="u-smallcaps">Queens Botanical Garden</span>
                             </div>
@@ -233,7 +233,7 @@ export default () =>
                                 We take a break
                             </div>
                             <div className="timeline__description">
-                                take a nap or explore the area, do anything you like!
+                                take a nap or explore the area, do anything you like!
                                 <br/>
                             </div>
                         </div>
