@@ -191,7 +191,7 @@ export default () =>
                                 We say yes
                             </div>
                             <div className="timeline__description">
-                                ceremony to be held outdoors in the wedding garden at 
+                                ceremony to be held outdoors  in the wedding garden at 
                                 <br/>
                                 <span className="u-smallcaps">Queens Botanical Garden</span>
                             </div>
