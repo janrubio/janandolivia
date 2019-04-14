@@ -11,7 +11,9 @@
     text-align: center;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    //padding: 4rem;
+    //justify-content: center;
+    //align-items: center;
 
     @include breakpoint(medium) {
         height: 620px;
@@ -20,16 +22,22 @@
 
 .logo {
     display: block;
-    width: 75%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     padding: 1rem;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    
+    margin: 2rem auto;
+    //padding-top: inherit;
+    //margin-bottom: 2rem;
+
     @include breakpoint(medium) {
-        margin-bottom: 4rem;
-        width: 60%;
+        margin: 4rem auto;
+        //margin-bottom: 4rem;
+        width: 100%;
+        //height: 100%;
+        max-width: 500px;
+
+
     }
 }
 
@@ -43,19 +51,8 @@
 
 .banner__detail-group {
     margin: 0 auto;
-    position: relative;
     display: flex;
-
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 100%;
-        height: 100%;
-        border: 2px solid #fff;
-    }
+    justify-content: center;
 }
 
 .banner__detail {
@@ -67,6 +64,7 @@
     font-weight: 700;
     letter-spacing: 1.5px;
     font-size: 0.8rem;
+    position: relative;
 
     @include breakpoint(medium) {
         padding: 1.25rem 2rem 1rem;
@@ -81,4 +79,29 @@
     & + & {
         border-left: 0;
     }
+
+    &:after {
+        content: '';
+        position: absolute;
+        box-sizing: content-box;
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        transform: translate(4px, 4px);
+    }
+
+    &:first-child:after {
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+
+    &:last-child:after {
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        padding-right: 2px;
+    }
 }
+

@@ -75,6 +75,7 @@ export default () =>
                 </li>
             </ul>
         </nav>
+
         <div className="banner">
             <img className="logo" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
             <div className="banner__detail-group">
@@ -87,12 +88,13 @@ export default () =>
             </div>
             <a href="/rsvp" class="btn__rsvp btn-version-1">RSVP</a>
         </div>
+
         <div id="a-story" className="container u-mb12">
             <section className="flex-container u-justify-center">
                 <div className="flex-item">
                     <article className="u-measure article u-mt3">
                         <h1 className="article__heading">
-                            <svg className="u-mr-half" viewBox="0 0 35 35" width="35px">
+                            <svg className="u-mr-half" viewBox="0 0 35 35" width="35px" height="35px">
                                 <use xlinkHref="#icon-hearts"/>
                             </svg>
                             <span>a story</span>
@@ -129,7 +131,7 @@ export default () =>
                     </picture>
                     <div className="card__description">
                         she said okay
-                        <svg viewBox="0 0 19 19" width="19px">
+                        <svg viewBox="0 0 19 19" width="19px" height="19px">
                             <use xlinkHref="#icon-ring"/>
                         </svg>
                     </div>
@@ -143,7 +145,7 @@ export default () =>
                     </picture>
                     <div className="card__description">
                         engaged
-                        <svg viewBox="0 0 19 19" width="19px">
+                        <svg viewBox="0 0 19 19" width="19px" height="19px">
                             <use xlinkHref="#icon-together"/>
                         </svg>
                     </div>
