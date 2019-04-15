@@ -75,8 +75,11 @@ export default () =>
                 </li>
             </ul>
         </nav>
+
         <div className="banner">
-            <img className="logo" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
+            <div className="logo__container">
+                <img className="logo" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
+            </div>
             <div className="banner__detail-group">
                 <div className="banner__detail">
                     <span className="u-show-for-medium">Sunday, </span>June 30th
@@ -87,12 +90,13 @@ export default () =>
             </div>
             <a href="/rsvp" class="btn__rsvp btn-version-1">RSVP</a>
         </div>
+
         <div id="a-story" className="container u-mb12">
             <section className="flex-container u-justify-center">
                 <div className="flex-item">
                     <article className="u-measure article u-mt3">
                         <h1 className="article__heading">
-                            <svg className="u-mr-half" viewBox="0 0 35 35" width="35px">
+                            <svg className="u-mr-half" viewBox="0 0 35 35" width="35px" height="35px">
                                 <use xlinkHref="#icon-hearts"/>
                             </svg>
                             <span>a story</span>
@@ -129,7 +133,7 @@ export default () =>
                     </picture>
                     <div className="card__description">
                         she said okay
-                        <svg viewBox="0 0 19 19" width="19px">
+                        <svg viewBox="0 0 19 19" width="19px" height="19px">
                             <use xlinkHref="#icon-ring"/>
                         </svg>
                     </div>
@@ -143,7 +147,7 @@ export default () =>
                     </picture>
                     <div className="card__description">
                         engaged
-                        <svg viewBox="0 0 19 19" width="19px">
+                        <svg viewBox="0 0 19 19" width="19px" height="19px">
                             <use xlinkHref="#icon-together"/>
                         </svg>
                     </div>
@@ -178,10 +182,10 @@ export default () =>
                 <div className="timeline">
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 30 35" width="30px">
+                            <svg viewBox="0 0 30 35" width="30px" height="35px">
                                 <use xlinkHref="#icon-ceremony"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-rings"/>
                             </svg>
                         </div>
@@ -199,10 +203,10 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-drinks"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-food"/>
                             </svg>
                         </div>
@@ -220,10 +224,10 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 24 35" width="24px">
+                            <svg viewBox="0 0 24 35" width="24px" height="35px">
                                 <use xlinkHref="#icon-rose"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-bird"/>
                             </svg>
                         </div>
@@ -240,10 +244,10 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 31 35" width="31px">
+                            <svg viewBox="0 0 31 35" width="31px" height="35px">
                                 <use xlinkHref="#icon-dinner"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-balloons"/>
                             </svg>
                         </div>

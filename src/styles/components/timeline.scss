@@ -39,7 +39,7 @@
     .timeline__group:nth-child(odd) & {
         @include breakpoint(medium) {
             order: 1;
-            border-left: initial;
+            border-left: none;
             border-right: 2px solid $color-secondary;
             max-width: 303px;
         }
@@ -61,14 +61,13 @@
         border: 2px solid $color-secondary;
         border-radius: 50%;
         background-color: $color-primary;
-        left: -5px;
+        right: calc(100% - 3px);
     }
 
     .timeline__group:nth-child(odd) & {
         @include breakpoint(medium) {
             &::after {
-                left: initial;
-                right: -5px;
+                left: calc(100% - 3px);
             }
         }
     }
@@ -77,6 +76,7 @@
 .timeline__time {
     display: inline-block;
     margin-right: 1rem;
+    white-space: nowrap;
 
     &::after {
         content: '\02219';
@@ -99,8 +99,8 @@
 
     .timeline__group:nth-child(odd) & {
         @include breakpoint(large) {
-            right: initial;
             left: -4.5rem;
+            text-align: left;
         }
     }
 }

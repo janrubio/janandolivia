@@ -40,7 +40,7 @@
     display: none;
 
     @include breakpoint(medium) {
-        display: initial;
+        display: inline;
     }
 }
 
@@ -54,7 +54,7 @@
     display: none;
 
     @include breakpoint(large) {
-        display: initial;
+        display: inline;
     }
 }
 
