@@ -77,7 +77,9 @@ export default () =>
         </nav>
 
         <div className="banner">
-            <img className="logo" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
+            <div className="logo__container">
+                <img className="logo" src="/janandolivia_logo.svg" alt="Jan and Olivia are getting married!"/>
+            </div>
             <div className="banner__detail-group">
                 <div className="banner__detail">
                     <span className="u-show-for-medium">Sunday, </span>June 30th
@@ -180,10 +182,10 @@ export default () =>
                 <div className="timeline">
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 30 35" width="30px">
+                            <svg viewBox="0 0 30 35" width="30px" height="35px">
                                 <use xlinkHref="#icon-ceremony"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-rings"/>
                             </svg>
                         </div>
@@ -201,10 +203,10 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-drinks"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-food"/>
                             </svg>
                         </div>
@@ -222,10 +224,10 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 24 35" width="24px">
+                            <svg viewBox="0 0 24 35" width="24px" height="35px">
                                 <use xlinkHref="#icon-rose"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-bird"/>
                             </svg>
                         </div>
@@ -242,10 +244,10 @@ export default () =>
                     </div>
                     <div className="timeline__group">
                         <div className="timeline__icon">
-                            <svg viewBox="0 0 31 35" width="31px">
+                            <svg viewBox="0 0 31 35" width="31px" height="35px">
                                 <use xlinkHref="#icon-dinner"/>
                             </svg>
-                            <svg viewBox="0 0 33 35" width="33px">
+                            <svg viewBox="0 0 33 35" width="33px" height="35px">
                                 <use xlinkHref="#icon-balloons"/>
                             </svg>
                         </div>

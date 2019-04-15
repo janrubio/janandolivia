@@ -11,34 +11,31 @@
     text-align: center;
     display: flex;
     flex-flow: column;
-    //padding: 4rem;
     //justify-content: center;
-    //align-items: center;
+    align-items: center;
 
     @include breakpoint(medium) {
         height: 620px;
     }
 }
 
+.logo__container {
+    margin-top: auto;
+    width: 75%;
+    max-width: 500px;
+    height: auto;
+    padding: 1rem;
+    padding-top: inherit;
+    margin-bottom: 2rem;
+    @include breakpoint(medium) {
+        width: 60%;
+        margin-bottom: 4rem;
+    }
+}
+
 .logo {
     display: block;
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    padding: 1rem;
-    margin: 2rem auto;
-    //padding-top: inherit;
-    //margin-bottom: 2rem;
-
-    @include breakpoint(medium) {
-        margin: 4rem auto;
-        //margin-bottom: 4rem;
-        width: 100%;
-        //height: 100%;
-        max-width: 500px;
-
-
-    }
 }
 
 .logo--small {
@@ -50,7 +47,7 @@
 }
 
 .banner__detail-group {
-    margin: 0 auto;
+    margin-bottom: auto;
     display: flex;
     justify-content: center;
 }
