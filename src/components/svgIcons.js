@@ -474,6 +474,22 @@ export default () => (
                     </g>
                 </svg>
             </symbol>
+
+            <symbol id="icon-pin">
+                <g transform="translate(2 2)" fill="none" fillRule="evenodd">
+                    <path d="M7.5 21c.5 0 .2-3 3.4-6 2.3-2.1 4.1-4.2 4.1-7.5a7.5 7.5 0 1 0-15 0c0 3.5 1.5 5.2 4.4 7.7C7.7 18.2 7 21 7.5 21z" stroke="#153048" strokeWidth="2.5" fill="#A2C3D4"/>
+                    <ellipse fill="#153048" cx="7.7" cy="7.6" rx="3" ry="2.9"/>
+                </g>
+            </symbol>
+
+            <symbol id="icon-parking">
+                <g transform="translate(2 2)" fill="none" fillRule="evenodd">
+                    <circle stroke="#153048" strokeWidth="3.2" fill="#A2C3D4" cx="9.5" cy="9.5" r="9.5"/>
+                    <text fontFamily="Roboto-Bold, Roboto" fontSize="12.7" fontWeight="bold" fill="#153048">
+                        <tspan x="6.3" y="14.4">P</tspan>
+                    </text>
+                </g>
+            </symbol>
         </svg>
     </svg>
 )

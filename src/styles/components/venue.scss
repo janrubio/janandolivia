@@ -1,0 +1,70 @@
+.venue {
+    box-shadow: 0 0 2rem 0 rgba(0,0,0,.1);
+       max-width: 980px;
+    margin: 0 auto;
+}
+
+.venue + .venue {
+    margin-top: 75px;
+}
+
+.venue__container {
+    flex-wrap: wrap;
+}
+
+.venue__detail {
+    position: relative;
+    flex-basis: 100%;
+}
+
+.venue__location {
+    @include breakpoint(medium) {
+        flex-basis: 43.33%;
+    }
+
+    .venue__description {
+        padding: 30px;
+    }
+}
+
+.venue__map {
+    @include breakpoint(medium) {
+        flex-basis: 56.67%;
+    }
+
+    .venue__description {
+        padding: 30px 50px 30px 30px;
+
+        @include breakpoint(medium) {
+            padding: 30px 30px 50px 0;
+        }
+    }
+}
+
+.venue__image {
+    width: 100%
+}
+
+.venue__items {
+    flex-wrap: wrap;
+}
+
+.venue__item {
+    flex-basis: 100%;
+
+    .heading {
+        margin-top: 3px;
+    }
+
+    @include breakpoint(medium) {
+        flex-basis: 50%;
+    }
+}
+
+.venue__item + .venue__item {
+    margin-top: 30px;
+
+    @include breakpoint(medium) {
+        margin-top: 0;
+    }
+}

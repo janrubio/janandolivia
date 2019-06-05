@@ -108,6 +108,10 @@
 .timeline__description {
     padding: 1rem;
     padding-top: 0.25rem;
+
+    a {
+        color: inherit;
+    }
 }
 
 .u-smallcaps {

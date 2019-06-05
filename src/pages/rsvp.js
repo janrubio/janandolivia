@@ -52,10 +52,20 @@ export default () =>
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a className="navbar__link" href="/#the-venues">
+                        <span className="navbar__ordinal">03</span>
+                        <div className="navbar__divider"></div>
+                        <div className="navbar__label">
+                            <span className="navbar__title">Where is it</span>
+                            <span className="navbar__text">Venue Details</span>
+                        </div>
+                    </a>
+                </li>
                 <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link navbar__link--active" href="/rsvp">
-                        <span className="navbar__ordinal">03</span>
+                        <span className="navbar__ordinal">04</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">You Coming?</span>
@@ -66,7 +76,7 @@ export default () =>
                 <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link" href="https://www.amazon.com/wedding/share/jan-and-olivia" target="_blank" rel="noopener noreferrer">
-                        <span className="navbar__ordinal">04</span>
+                        <span className="navbar__ordinal">05</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">A Wishlist of Sorts</span>

@@ -51,10 +51,20 @@ export default () =>
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a className="navbar__link" href="#the-venues">
+                        <span className="navbar__ordinal">03</span>
+                        <div className="navbar__divider"></div>
+                        <div className="navbar__label">
+                            <span className="navbar__title">Where is it</span>
+                            <span className="navbar__text">Venue Details</span>
+                        </div>
+                    </a>
+                </li>
                 <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link" href="/rsvp">
-                        <span className="navbar__ordinal">03</span>
+                        <span className="navbar__ordinal">04</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">You Coming?</span>
@@ -65,7 +75,7 @@ export default () =>
                 <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link" href="https://www.amazon.com/wedding/share/jan-and-olivia" target="_blank" rel="noopener noreferrer">
-                        <span className="navbar__ordinal">03</span>
+                        <span className="navbar__ordinal">05</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">A Wishlist of Sorts</span>
@@ -214,7 +224,7 @@ export default () =>
                             <div className="timeline__description">
                                 post-ceremony brunch and drinks to be served on the outdoor terrace at
                                 <br/>
-                                <span className="u-smallcaps">Queens Botanical Garden</span>
+                                <a href="#venue-queens-botanical-garden"><span className="u-smallcaps">Queens Botanical Garden</span></a>
                             </div>
                         </div>
                     </div>
@@ -255,7 +265,7 @@ export default () =>
                             <div className="timeline__description">
                                 rejoin us for a banquet dinner reception, dancing, and more at the
                                 <br/>
-                                <span className="u-smallcaps">Royal Queen</span>
+                                <a href="#venue-royal-queen"><span className="u-smallcaps">Royal Queen</span></a>
                             </div>
                         </div>
                     </div>
@@ -263,6 +273,154 @@ export default () =>
                 <div className="rsvp-container">
                     <a href="/rsvp" className="btn__rsvp">RSVP</a>
                 </div>
+            </div>
+        </section>
+
+        <section className="section">
+            <div  id="the-venues" className="container">
+                <h2 className="heading heading--medium u-text-center u-mt4 u-mb4">
+                    where this is going down
+                </h2>
+
+                <article id="venue-queens-botanical-garden" className="venue">
+                    <div className="venue__container flex-container u-justify-center">
+                        <div className="venue__detail venue__location">
+                            <picture className="venue__image">
+                                <source srcSet="venue-photos/qbg-photo.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/qbg-photo.png" alt="Photo of Queens Botanical Garden terrace"/>
+                            </picture>
+                            <div className="venue__description">
+                                <div className="heading heading--x-small">
+                                    Queens Botanical Garden
+                                </div>
+                                <div>
+                                    43-50 Main St, Flushing, NY
+                                </div>
+                            </div>
+                        </div>
+                        <div className="venue__detail venue__map">
+                            <picture className="venue__image">
+                                <source srcSet="venue-photos/qbg-map.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/qbg-map.png" alt="Map of Queens Botanical Garden"/>
+                            </picture>
+                            <div className="venue__description">
+                                <div className="venue__items flex-container">
+                                    <div className="venue__item">
+                                        <div className="flex-container">
+                                            <div>
+                                                <svg viewBox="0 0 33 35" width="33px">
+                                                    <use xlinkHref="#icon-parking"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div className="heading heading--xx-small">
+                                                    Parking
+                                                </div>
+                                                <div>
+                                                    42-80 Crommelin Street
+                                                    <br/>
+                                                    Flushing, NY
+                                                </div>
+                                                <div>
+                                                    <br/>
+                                                    Parking is $6. Admission is free for guests. Mention couples name at parking booth or front entrance booth.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="venue__item">
+                                        <div className="flex-container">
+                                            <div>
+                                                <svg viewBox="0 0 33 35" width="33px">
+                                                    <use xlinkHref="#icon-pin"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div className="heading heading--xx-small">
+                                                    Wedding Garden
+                                                </div>
+                                                <div>
+                                                    Ceremony to be held outdoors in the garden, and the brunch reception on the nearby terrace.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article  id="venue-royal-queen"  className="venue">
+                    <div className="venue__container flex-container u-justify-center">
+                        <div className="venue__detail venue__location">
+                            <picture className="venue__image">
+                                <source srcSet="venue-photos/royal-queen-photo.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/royal-queen-photo.png" alt="Photo of New World Mall"/>
+                            </picture>
+                            <div className="venue__description">
+                                <div className="heading heading--x-small">
+                                    Royal Queen
+                                </div>
+                                <div>
+                                    136-20 Roosevelt Ave, Flushing, NY
+                                </div>
+                            </div>
+                        </div>
+                        <div className="venue__detail venue__map">
+                            <picture className="venue__image">
+                                <source srcSet="venue-photos/royal-queen-map.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/royal-queen-map.png" alt="Map of Flushing"/>
+                            </picture>
+                            <div className="venue__description">
+                                <div className="venue__items flex-container">
+                                    <div className="venue__item">
+                                        <div className="flex-container">
+                                            <div>
+                                                <svg viewBox="0 0 33 35" width="33px">
+                                                    <use xlinkHref="#icon-parking"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div className="heading heading--xx-small">
+                                                    Parking
+                                                </div>
+                                                <div>
+                                                    37-39 138th St
+                                                    <br/>
+                                                    Flushing, NY
+                                                </div>
+                                                <div>
+                                                    <br/>
+                                                    Multi-level parking facility.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="venue__item">
+                                        <div className="flex-container">
+                                            <div>
+                                                <svg viewBox="0 0 33 35" width="33px">
+                                                    <use xlinkHref="#icon-pin"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div className="heading heading--xx-small">
+                                                    Royal Queen
+                                                </div>
+                                                <div>
+                                                    The restaurant is inside the
+                                                    <br/>
+                                                    New World Mall on the 3rd floor. It is accessible using the elevators or the escalators.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
