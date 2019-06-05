@@ -96,3 +96,19 @@
         display: none;
     }
 }
+
+.navbar__link--hidden-mobile {
+    display: none;
+
+    @include breakpoint(medium) {
+        display: list-item;
+    }
+}
+
+.navbar__text--hidden-mobile {
+    display: none;
+
+    @include breakpoint(medium) {
+        display: inline;
+    }
+}

@@ -30,7 +30,7 @@ export default () =>
         <SvgIcons/>
         <nav className="navbar">
             <ul className="navbar__links">
-                <li>
+                <li class="navbar__link--hidden-mobile">
                     <a className="navbar__link" href="#a-story">
                         <span className="navbar__ordinal">01</span>
                         <div className="navbar__divider"></div>
@@ -40,24 +40,24 @@ export default () =>
                         </div>
                     </a>
                 </li>
-                <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link" href="#the-plan">
                         <span className="navbar__ordinal">02</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">What's Going Down</span>
-                            <span className="navbar__text">The Plan</span>
+                            <span className="navbar__text"><span class="navbar__text--hidden-mobile">The</span> Plan</span>
                         </div>
                     </a>
                 </li>
+                <li className="navbar__link-divider"></li>
                 <li>
                     <a className="navbar__link" href="#the-venues">
                         <span className="navbar__ordinal">03</span>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">Where is it</span>
-                            <span className="navbar__text">Venue Details</span>
+                            <span className="navbar__text">Venue <span class="navbar__text--hidden-mobile">Details</span></span>
                         </div>
                     </a>
                 </li>

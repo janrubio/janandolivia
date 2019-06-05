@@ -23,7 +23,7 @@
     }
 
     .venue__description {
-        padding: 30px;
+        padding: 30px 30px 40px;
     }
 }
 
@@ -33,10 +33,10 @@
     }
 
     .venue__description {
-        padding: 30px 50px 30px 30px;
+        padding: 30px 50px 50px 30px;
 
         @include breakpoint(medium) {
-            padding: 30px 30px 50px 0;
+            padding: 30px 30px 40px 0;
         }
     }
 }
