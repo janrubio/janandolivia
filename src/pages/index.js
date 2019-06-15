@@ -286,8 +286,8 @@ export default () =>
                     <div className="venue__container flex-container u-justify-center">
                         <div className="venue__detail venue__location">
                             <picture className="venue__image">
-                                <source srcSet="venue-photos/qbg-photo-2.png" type="image/png"/>
-                                <img className="venue__image" src="venue-photos/qbg-photo-2.png" alt="Photo of Queens Botanical Garden terrace"/>
+                                <source srcSet="venue-photos/qbg-photo-3.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/qbg-photo-3.png" alt="Photo of Queens Botanical Garden terrace"/>
                             </picture>
                             <div className="venue__description">
                                 <div className="heading heading--x-small">
@@ -355,8 +355,8 @@ export default () =>
                     <div className="venue__container flex-container u-justify-center">
                         <div className="venue__detail venue__location">
                             <picture className="venue__image">
-                                <source srcSet="venue-photos/royal-queen-photo-2.png" type="image/png"/>
-                                <img className="venue__image" src="venue-photos/royal-queen-photo-2.png" alt="Photo of New World Mall"/>
+                                <source srcSet="venue-photos/royal-queen-photo-3.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/royal-queen-photo-3.png" alt="Photo of New World Mall"/>
                             </picture>
                             <div className="venue__description">
                                 <div className="heading heading--x-small">
