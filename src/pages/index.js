@@ -30,7 +30,7 @@ export default () =>
         <SvgIcons/>
         <nav className="navbar">
             <ul className="navbar__links">
-                <li class="navbar__link--hidden-mobile">
+                <li className="navbar__link--hidden-mobile">
                     <a className="navbar__link" href="#a-story">
                         <span className="navbar__ordinal">01</span>
                         <div className="navbar__divider"></div>
@@ -46,7 +46,7 @@ export default () =>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">What's Going Down</span>
-                            <span className="navbar__text"><span class="navbar__text--hidden-mobile">The</span> Plan</span>
+                            <span className="navbar__text"><span className="navbar__text--hidden-mobile">The</span> Plan</span>
                         </div>
                     </a>
                 </li>
@@ -57,7 +57,7 @@ export default () =>
                         <div className="navbar__divider"></div>
                         <div className="navbar__label">
                             <span className="navbar__title">Where is it</span>
-                            <span className="navbar__text">Venue <span class="navbar__text--hidden-mobile">Details</span></span>
+                            <span className="navbar__text">Venue <span className="navbar__text--hidden-mobile">Details</span></span>
                         </div>
                     </a>
                 </li>
@@ -95,7 +95,10 @@ export default () =>
                     Queens, <span className="u-hide-for-medium">NY</span><span className="u-show-for-medium">New York</span>
                 </div>
             </div>
-            <a href="/rsvp" class="btn__rsvp btn-version-1">RSVP</a>
+            <div className="banner__actions">
+                <a href="#the-plan" className="btn__rsvp btn-version-1">Day-of Timeline</a>
+                <a href="#the-venues" className="btn__rsvp btn-version-1">Venue Details</a>
+            </div>
         </div>
         <div id="a-story" className="container u-mb12">
             <section className="flex-container u-justify-center">
@@ -181,7 +184,7 @@ export default () =>
                     <div className="rolodex__card">19</div>
                 </div>
 
-                <h2 className="heading heading--medium u-text-center u-mt4 u-mb4">
+                <h2 className="heading heading--medium u-text-center u-mt4 u-mb4 u-p1">
                     here’s the plan for sunday, june 30th&mdash; good times ahead.
                 </h2>
 
@@ -243,8 +246,27 @@ export default () =>
                                 We take a break
                             </div>
                             <div className="timeline__description">
-                                take a nap or explore the area, do anything you like!
+                                take a nap, explore the area, or do anything else you'd like!
                                 <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="timeline__group">
+                        <div className="timeline__icon">
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-balloons"/>
+                            </svg>
+                            <svg viewBox="0 0 33 35" width="33px">
+                                <use xlinkHref="#icon-drinks"/>
+                            </svg>
+                        </div>
+                        <div className="timeline__event">
+                            <div className="timeline__title heading heading--small">
+                                <span className="timeline__time">6pm</span>
+                                We drink
+                            </div>
+                            <div className="timeline__description">
+                                doors open at <a href="#venue-royal-queen"><span className="u-smallcaps">Royal Queen</span></a>. grab a drink at the open bar before the banquet reception
                             </div>
                         </div>
                     </div>
@@ -254,31 +276,28 @@ export default () =>
                                 <use xlinkHref="#icon-dinner"/>
                             </svg>
                             <svg viewBox="0 0 33 35" width="33px">
-                                <use xlinkHref="#icon-balloons"/>
+                                <use xlinkHref="#icon-food"/>
                             </svg>
                         </div>
                         <div className="timeline__event">
                             <div className="timeline__title heading heading--small">
-                                <span className="timeline__time">6pm</span>
+                                <span className="timeline__time">7pm</span>
                                 We celebrate
                             </div>
                             <div className="timeline__description">
-                                rejoin us for a banquet dinner reception, dancing, and more at the
+                                enjoy banquet festivities and dinner served family style at the
                                 <br/>
                                 <a href="#venue-royal-queen"><span className="u-smallcaps">Royal Queen</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="rsvp-container">
-                    <a href="/rsvp" className="btn__rsvp">RSVP</a>
-                </div>
             </div>
         </section>
 
         <section className="section">
             <div  id="the-venues" className="container">
-                <h2 className="heading heading--medium u-text-center u-mt4 u-mb4">
+                <h2 className="heading heading--medium u-text-center u-mt4 u-mb4 u-p1">
                     where this is going down
                 </h2>
 
@@ -286,22 +305,24 @@ export default () =>
                     <div className="venue__container flex-container u-justify-center">
                         <div className="venue__detail venue__location">
                             <picture className="venue__image">
-                                <source srcSet="venue-photos/qbg-photo-3.png" type="image/png"/>
-                                <img className="venue__image" src="venue-photos/qbg-photo-3.png" alt="Photo of Queens Botanical Garden terrace"/>
+                                <source srcSet="venue-photos/qbg-photo-4.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/qbg-photo-4.png" alt="Photo of Queens Botanical Garden terrace"/>
                             </picture>
                             <div className="venue__description">
                                 <div className="heading heading--x-small">
                                     Queens Botanical Garden
                                 </div>
                                 <div>
-                                    43-50 Main St, Flushing, NY
+                                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=43-50+Main+St+Flushing+NY+11355" target="_blank">
+                                        43-50 Main St, Flushing, NY
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div className="venue__detail venue__map">
                             <picture className="venue__image">
-                                <source srcSet="venue-photos/qbg-map.png" type="image/png"/>
-                                <img className="venue__image" src="venue-photos/qbg-map.png" alt="Map of Queens Botanical Garden"/>
+                                <source srcSet="venue-photos/qbg-map-2.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/qbg-map-2.png" alt="Map of Queens Botanical Garden"/>
                             </picture>
                             <div className="venue__description">
                                 <div className="venue__items flex-container">
@@ -317,13 +338,15 @@ export default () =>
                                                     Parking
                                                 </div>
                                                 <div>
-                                                    42-80 Crommelin Street
-                                                    <br/>
-                                                    Flushing, NY
+                                                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=42-80+Crommelin+Street+Flushing+NY+11355" target="_blank">
+                                                        42-80 Crommelin Street
+                                                        <br/>
+                                                        Flushing, NY
+                                                    </a>
                                                 </div>
                                                 <div>
                                                     <br/>
-                                                    Parking is $6. Admission is free for guests. Mention couples name at parking booth or front entrance booth.
+                                                    Admission and parking is free for guests. Just mention our names at the booth (otherwise parking is $10).
                                                 </div>
                                             </div>
                                         </div>
@@ -331,8 +354,8 @@ export default () =>
                                     <div className="venue__item">
                                         <div className="flex-container">
                                             <div>
-                                                <svg viewBox="0 0 33 35" width="33px">
-                                                    <use xlinkHref="#icon-pin"/>
+                                                <svg viewBox="0 0 33 35" width="29px">
+                                                    <use xlinkHref="#icon-heart-pin"/>
                                                 </svg>
                                             </div>
                                             <div>
@@ -340,7 +363,7 @@ export default () =>
                                                     Wedding Garden
                                                 </div>
                                                 <div>
-                                                    Ceremony to be held outdoors in the garden, and the brunch reception on the nearby terrace.
+                                                    Ceremony to be held outdoors in the wedding garden, and the brunch reception on the nearby terrace.
                                                 </div>
                                             </div>
                                         </div>
@@ -355,22 +378,24 @@ export default () =>
                     <div className="venue__container flex-container u-justify-center">
                         <div className="venue__detail venue__location">
                             <picture className="venue__image">
-                                <source srcSet="venue-photos/royal-queen-photo-3.png" type="image/png"/>
-                                <img className="venue__image" src="venue-photos/royal-queen-photo-3.png" alt="Photo of New World Mall"/>
+                                <source srcSet="venue-photos/royal-queen-photo-4.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/royal-queen-photo-4.png" alt="Photo of New World Mall"/>
                             </picture>
                             <div className="venue__description">
                                 <div className="heading heading--x-small">
                                     Royal Queen
                                 </div>
                                 <div>
-                                    136-20 Roosevelt Ave, Flushing, NY
+                                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=136-20+Roosevelt+Ave+Flushing+NY+11354" target="_blank">
+                                        136-20 Roosevelt Ave, Flushing, NY
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div className="venue__detail venue__map">
                             <picture className="venue__image">
-                                <source srcSet="venue-photos/royal-queen-map.png" type="image/png"/>
-                                <img className="venue__image" src="venue-photos/royal-queen-map.png" alt="Map of Flushing"/>
+                                <source srcSet="venue-photos/royal-queen-map-2.png" type="image/png"/>
+                                <img className="venue__image" src="venue-photos/royal-queen-map-2.png" alt="Map of Flushing"/>
                             </picture>
                             <div className="venue__description">
                                 <div className="venue__items flex-container">
@@ -386,9 +411,11 @@ export default () =>
                                                     Parking
                                                 </div>
                                                 <div>
-                                                    37-39 138th St
-                                                    <br/>
-                                                    Flushing, NY
+                                                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=37-39+138th+St+Flushing+NY+11354" target="_blank">
+                                                        37-39 138th St
+                                                        <br/>
+                                                        Flushing, NY
+                                                    </a>
                                                 </div>
                                                 <div>
                                                     <br/>
@@ -400,8 +427,8 @@ export default () =>
                                     <div className="venue__item">
                                         <div className="flex-container">
                                             <div>
-                                                <svg viewBox="0 0 33 35" width="33px">
-                                                    <use xlinkHref="#icon-pin"/>
+                                                <svg viewBox="0 0 33 35" width="29px">
+                                                    <use xlinkHref="#icon-heart-pin"/>
                                                 </svg>
                                             </div>
                                             <div>
@@ -424,62 +451,7 @@ export default () =>
             </div>
         </section>
 
-        {/*
-        <section>
-            <div style={{textAlign: 'center'}}>
-                <svg viewBox="0 0 22 16" width="22px">
-                    <use xlinkHref="#icon-heart"/>
-                </svg>
-
-                <svg viewBox="0 0 33 35" width="33px">
-                    <use xlinkHref="#icon-bird"/>
-                </svg>
-                <svg viewBox="0 0 33 35" width="33px">
-                    <use xlinkHref="#icon-drinks"/>
-                </svg>
-                <svg viewBox="0 0 33 35" width="33px">
-                    <use xlinkHref="#icon-food"/>
-                </svg>
-                <svg viewBox="0 0 33 35" width="33px">
-                    <use xlinkHref="#icon-rings"/>
-                </svg>
-                <svg viewBox="0 0 24 35" width="24px">
-                    <use xlinkHref="#icon-rose"/>
-                </svg>
-                <svg viewBox="0 0 30 35" width="30px">
-                    <use xlinkHref="#icon-ceremony"/>
-                </svg>
-                <svg viewBox="0 0 33 35" width="33px">
-                    <use xlinkHref="#icon-balloons"/>
-                </svg>
-                <svg viewBox="0 0 31 35" width="31px">
-                    <use xlinkHref="#icon-dinner"/>
-                </svg>
-            </div>
-        </section>
-
-        <section>
-            <svg viewBox="0 0 143 80" width="143px">
-                <use xlinkHref="#icon-floral"/>
-            </svg>
-            <h1>stay tuned for more details, including…</h1>
-            <section>
-                <article>
-                    <h2>RSVP Info</h2>
-                    <p>coming soon</p>
-                </article>
-                <article>
-                    <h2>Accommodations</h2>
-                    <p>coming soon</p>
-                </article>
-                <article>
-                    <h2>Gift Registry</h2>
-                    <p>coming soon</p>
-                </article>
-            </section>
-        </section>
-        */}
-        <footer className="u-mt1 u-mb1 u-text-center">
+        <footer className="u-mt1 u-mb1 u-text-center u-pb1">
             Made with love by Jan & Olivia
         </footer>
     </Layout>

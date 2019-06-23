@@ -383,9 +383,19 @@
     text-decoration: none;
 }
 
-.banner .btn__rsvp {
+.banner .banner__actions {
     margin-top: 40px;
     margin-bottom: 30px;
+}
+
+.banner .btn__rsvp + .btn__rsvp {
+    display: inline-block;
+    margin-top: 25px;
+
+    @include breakpoint(small) {
+        display: inline-block;
+        margin-left: 10px;
+    }
 }
 
 .rsvp-container {

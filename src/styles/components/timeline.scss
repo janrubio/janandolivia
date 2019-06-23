@@ -1,6 +1,12 @@
 // Timeline
 
-.timeline {}
+.timeline {
+    padding: 0 20px 0 0;
+
+    @include breakpoint(small) {
+        padding: 0;
+    }
+}
 
 .timeline__group {
     display: flex;
@@ -76,12 +82,20 @@
 
 .timeline__time {
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: .5rem;
+
+    @include breakpoint(small) {
+        margin-right: 1rem;
+    }
 
     &::after {
         content: '\02219';
         display: inline-block;
-        margin-left: 1rem;
+        margin-left: .5rem;
+
+        @include breakpoint(small) {
+            margin-left: 1rem;
+        }
     }
 
     @include breakpoint(large) {

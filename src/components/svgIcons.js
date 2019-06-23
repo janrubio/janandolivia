@@ -482,6 +482,14 @@ export default () => (
                 </g>
             </symbol>
 
+            <symbol id="icon-heart-pin">
+                <g fill="none" fillRule="evenodd">
+                    <path d="M11.6 29.3c.6 0 .3-4 4.3-7.8 3-2.8 5.3-5.4 5.3-9.7C21.2 6.4 17 2 11.6 2A9.7 9.7 0 0 0 2 11.8c0 4.4 2 6.7 5.6 10 4.3 3.9 3.5 7.5 4 7.5z" stroke="#153048" strokeWidth="3.2" fill="#A2C3D4"/>
+                    <path d="M9.3 8.3a2.6 2.6 0 0 0-2.6 2.5c0 2.9 3 3.6 5 6.5 2-2.8 5-3.7 5-6.5 0-1.4-1.2-2.5-2.6-2.5-1 0-2 .6-2.4 1.5a2.6 2.6 0 0 0-2.4-1.5z" fill="#153048" fillRule="nonzero"/>
+                </g>
+            </symbol>
+
+
             <symbol id="icon-parking">
                 <g transform="translate(2 2)" fill="none" fillRule="evenodd">
                     <circle stroke="#153048" strokeWidth="3.2" fill="#A2C3D4" cx="9.5" cy="9.5" r="9.5"/>
